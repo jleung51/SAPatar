@@ -2,7 +2,7 @@ import * as React from 'react'
 import Avatar from 'avataaars'
 import StoreContext from '../storeContext';
 
-let styles = {
+const styles = {
   avatar: {
     // Sizing
     width: '400px',
@@ -11,8 +11,27 @@ let styles = {
 };
 
 export default class Person extends React.Component {
+
+  wardrobe = {
+    'clothes': [
+      'BlazerShirt',
+      'BlazerSweater',
+      'ShirtVNeck',
+    ],
+  };
+
+  currentOutfit = {
+    eyeType: 'Default',
+    clotheType: 'BlazerShirt',
+    mouthType: 'Smile'
+  };
+
   componentDidMount() {
     console.log(this.context)
+  }
+
+  getWardrobe() {
+    return this.wardrobe;
   }
 
   render () {
@@ -20,16 +39,16 @@ export default class Person extends React.Component {
       <div>
         <Avatar
           style={styles.avatar}
-          avatarStyle='Transparent'
+          avatarStyle='Circle'
           topType='LongHairMiaWallace'
           accessoriesType='Prescription02'
-          hairColor='BrownDark'
+          hairColor={currentOutfit.hairColor}
           facialHairType='Blank'
-          clotheType='Hoodie'
+          clotheType={currentOutfit.clotheType}
           clotheColor='PastelBlue'
-          eyeType='Happy'
+          eyeType={currentOutfit.eyeType}
           eyebrowType='Default'
-          mouthType='Smile'
+          mouthType={currentOutfit.mouthType}
           skinColor='Light'
         />
       </div>
