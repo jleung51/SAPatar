@@ -25,10 +25,12 @@
   "dependencies": {
     "avataaars": "^1.2.1",
     "bootstrap": "^4.5.0",
+    "file-loader": "^6.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "url-loader": "^4.1.0"
   }
 }

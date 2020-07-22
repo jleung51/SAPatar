@@ -4,14 +4,27 @@ import Person from './components/Person';
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
 
+import Background from './img/background.jpg';
+
 const styles = {
     outlined: {
         outline: '2px dotted red'
     },
 
+    root: {
+        backgroundImage: "url(" + Background + ")",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+        height: '100%',
+        margin: '0',
+        padding: '0',
+    },
+
     floatingContainer: {
-        margin: '40px',
-        height: '86%',
+        padding: '40px',
+
+        height: '95%',
     },
 
     sidebar: {
@@ -94,32 +107,36 @@ class App extends Component {
 
     render() {
         return (
-            <StoreContext.Provider value={Store}>
+            <div style={styles.root}>
+            <StoreContext.Provider value={Store} >
                 {/* <MainNavbar/> */}
 
-                <div style={styles.floatingContainer}>
 
-                    <div style={styles.sidebar.container}>
-                        <div style={styles.sidebar.title}>
-                            LEADERBOARD
+                    <div style={styles.floatingContainer}>
+
+                        <div style={styles.sidebar.container}>
+                            <div style={styles.sidebar.title}>
+                                LEADERBOARD
+                            </div>
                         </div>
+
+                        <div style={styles.notSidebarContainer}>
+
+                            <div style={styles.welcomeMessage}>
+                                Welcome back, Tiffany!
+                            </div>
+
+                            <div style={styles.avatarContainer}>
+                                <Person/>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div style={styles.notSidebarContainer}>
-
-                        <div style={styles.welcomeMessage}>
-                            Welcome back, Tiffany!
-                        </div>
-
-                        <div style={styles.avatarContainer}>
-                            <Person/>
-                        </div>
-
-                    </div>
-
-                </div>
 
             </StoreContext.Provider>
+                    </div>
 
         )
     }
