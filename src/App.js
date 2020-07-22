@@ -3,10 +3,11 @@ import Modal from 'react-modal';
 import Person from './components/Person';
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
+import { Container, Col, Row } from 'react-bootstrap';
 
 const styles = {
     outlined: {
-        outline: '5px dotted red'
+        outline: '2px dotted red'
     },
     avatarContainer: {
         // Positioning
@@ -37,11 +38,23 @@ class App extends Component {
             <StoreContext.Provider value={Store}>
                 {/* <MainNavbar/> */}
 
-                <div style={styles.avatarContainer}>
-                    <Person style={styles.avatar}/>
-                </div>
+
+                <Container>
+                    <Row>
+                        <Col>
+
+                            <div style={styles.avatarContainer}>
+                                <Person style={styles.avatar}/>
+                            </div>
+
+
+                        </Col>
+                    </Row>
+
+                </Container>
 
             </StoreContext.Provider>
+
         )
     }
 }

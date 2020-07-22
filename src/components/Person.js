@@ -39,7 +39,7 @@ export default class Person extends React.Component {
       <div>
         <Avatar
           style={styles.avatar}
-          avatarStyle='Circle'
+          avatarStyle='Transparent'
           topType='LongHairMiaWallace'
           accessoriesType='Prescription02'
           hairColor={currentOutfit.hairColor}
