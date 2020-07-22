@@ -4,7 +4,7 @@ import StoreContext from '../storeContext';
 
 export default class Person extends React.Component {
   componentDidMount() {
-    console.log(this.context)
+    console.log(this.context.getState())
   }
 
   render () {
@@ -15,7 +15,7 @@ export default class Person extends React.Component {
           avatarStyle='Transparent'
           topType='LongHairMiaWallace'
           accessoriesType='Prescription02'
-          hairColor='BrownDark'
+          hairColor='Black'
           facialHairType='Blank'
           clotheType='Hoodie'
           clotheColor='PastelBlue'
