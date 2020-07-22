@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import MainNavbar from './components/MainNavbar';
+import Modal from 'react-modal';
 import Person from './components/Person';
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
 
-let styles = {
+const styles = {
     outlined: {
         outline: '5px dotted red'
     },
@@ -17,17 +17,30 @@ let styles = {
 
         marginTop: '100px',
     },
+
+    modal: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    },
 };
+
+Modal.setAppElement('#app');
 
 class App extends Component {
 
     render() {
         return (
             <StoreContext.Provider value={Store}>
-                <MainNavbar/>
+                {/* <MainNavbar/> */}
+
                 <div style={styles.avatarContainer}>
                     <Person style={styles.avatar}/>
                 </div>
+
             </StoreContext.Provider>
         )
     }
