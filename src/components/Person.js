@@ -10,21 +10,21 @@ const styles = {
   }
 };
 
+let wardrobe = {
+  'clothes': [
+    'BlazerShirt',
+    'BlazerSweater',
+    'ShirtVNeck',
+  ],
+};
+
+let currentOutfit = {
+  eyeType: 'Default',
+  clotheType: 'BlazerShirt',
+  mouthType: 'Smile'
+};
+
 export default class Person extends React.Component {
-
-  wardrobe = {
-    'clothes': [
-      'BlazerShirt',
-      'BlazerSweater',
-      'ShirtVNeck',
-    ],
-  };
-
-  currentOutfit = {
-    eyeType: 'Default',
-    clotheType: 'BlazerShirt',
-    mouthType: 'Smile'
-  };
 
   componentDidMount() {
     console.log(this.context)
