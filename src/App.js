@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import Person from './components/Person';
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
+import { Button } from 'react-bootstrap';
 
 import Background from './img/background.jpg';
 
@@ -91,6 +92,15 @@ const styles = {
         // outline: '1px dotted grey',
     },
 
+    buttonContainer: {
+        // Contents
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        margin: '60px 0',
+    },
+
     modal: {
         top: '50%',
         left: '50%',
@@ -128,6 +138,10 @@ class App extends Component {
 
                             <div style={styles.avatarContainer}>
                                 <Person/>
+                            </div>
+
+                            <div style={styles.buttonContainer}>
+                               <Button variant="light" size="lg">I attended an event</Button>
                             </div>
 
                         </div>
