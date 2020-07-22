@@ -1,14 +1,28 @@
 const initialState = {
-    topType:'LongHairMiaWallace',
-    accessoriesType:'Prescription02',
-    hairColor:'BrownDark',
-    facialHairType:'Blank',
-    clotheType:'Hoodie',
-    clotheColor:'PastelBlue',
-    eyeType:'Happy',
-    eyebrowType:'Default',
-    mouthType:'Smile',
-    skinColor:'Light'
+    wardrobe: {
+        'clothes': [
+        'BlazerShirt',
+        'BlazerSweater',
+        'ShirtVNeck',
+        ],
+    },
+
+    currentOutfit: {
+        topType:'LongHairMiaWallace',
+        hairColor:'BrownDark',
+        accessoriesType:'Prescription02',
+        clotheType: 'BlazerShirt',
+        clotheColor:'PastelBlue',
+    },
+
+    physicalChars: {    
+        eyeType:'Happy',
+        eyebrowType:'Default',
+        mouthType: 'Smile',
+        skinColor:'Light',
+        facialHairType:'Blank',
+        hairColor:'Black'
+    }
 }
 
 export default function reducer (state = initialState, action) {
