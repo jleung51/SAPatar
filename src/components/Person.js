@@ -5,8 +5,8 @@ import StoreContext from '../storeContext';
 const styles = {
   avatar: {
     // Sizing
-    width: '400px',
-    height: '400px',
+    width: '300px',
+    height: '300px',
   }
 };
 
