@@ -1,49 +1,41 @@
 import React, {Component} from 'react';
-import Modal from 'react-modal';
 import Person from './components/Person';
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
-import AvatarForm from './components/CustomizeForm'
-
-const styles = {
-    outlined: {
-        outline: '5px dotted red'
-    },
-    avatarContainer: {
-        // Positioning
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-
-        marginTop: '100px',
-    },
-
-    modal: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
-    },
-};
-
-Modal.setAppElement('#app');
+import styles from './styles/styles';
+import CustomizeModal from './components/CustomizeModal';
+import EventCodeModal from './components/EventCodeModal';
 
 class App extends Component {
-
     render() {
         return (
-            <StoreContext.Provider value={Store}>
-                {/* <MainNavbar/> */}
+            <div style={styles.root}>
+            <StoreContext.Provider value={Store} >
+                <div style={styles.floatingContainer}>
+                    <div style={styles.sidebar.container}>
+                        <div style={styles.sidebar.title}>
+                            LEADERBOARD
+                        </div>
+                    </div>
 
-                <div style={styles.avatarContainer}>
-                    <Person style={styles.avatar}/>
-                    <AvatarForm />
+                    <div style={styles.notSidebarContainer}>
+                        <div style={styles.welcomeMessage}>
+                            Welcome back, Tiffany!
+                        </div>
+
+                        <div style={styles.avatarContainer}>
+                            <Person/>
+                        </div>
+
+                        <div style={styles.buttonContainer}>
+                            <EventCodeModal/>
+                            <CustomizeModal/>
+                        </div>
+                    </div>
                 </div>
-
             </StoreContext.Provider>
+            </div>
+
         )
     }
 }

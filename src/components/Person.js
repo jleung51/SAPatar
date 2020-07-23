@@ -6,13 +6,12 @@ import StoreContext from '../storeContext';
 const styles = {
   avatar: {
     // Sizing
-    width: '400px',
-    height: '400px',
+    width: '300px',
+    height: '300px',
   }
 };
 
 export default class Person extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
