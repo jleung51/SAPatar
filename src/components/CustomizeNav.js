@@ -9,7 +9,7 @@ class CustomizeNav extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link href="#homes">Eyes</Nav.Link>
-                <Nav.Link href="#homses">Eyesbrows</Nav.Link>
+                <Nav.Link href="#homses">Eyebrows</Nav.Link>
                 <Nav.Link href="#homea">Hair</Nav.Link>
                 <Nav.Link href="#h">Mouth</Nav.Link>
                 <Nav.Link href="#hom">Skin</Nav.Link>
