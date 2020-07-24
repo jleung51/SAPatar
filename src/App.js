@@ -10,6 +10,8 @@ import styles from './styles/styles';
 import CustomizeModal from './components/CustomizeModal';
 import EventCodeModal from './components/EventCodeModal';
 
+import './styles/fonts.css';
+
 // Pictures
 import FlagCanada from './img/flags/flag-canada.png';
 import WhiteGradient from './img/white-gradient.png';
