@@ -77,8 +77,9 @@ const styles = {
             marginTop: '34px',
             marginBottom: '22px',
 
-            fontSize: '1.6em',
+            fontSize: '2.4em',
             fontWeight: 'bold',
+            color: '#334E69',
         },
 
         button: {
@@ -204,12 +205,13 @@ const styles = {
         width: '100%',
         display: 'inline-block',
         verticalAlign: 'top',
-        margin: '10px 0',
+        margin: '30px 0',
 
         // Contents
         textAlign: 'center',
         fontSize: '48px',
         fontWeight: 'bold',
+        color: '#E8ECF0',
     },
 
     // To customize the avatar size, go to Person.js
