@@ -125,9 +125,6 @@ class App extends Component {
                                 />
                         </div>
 
-
-
-
                     </div>
 
                     <div style={styles.notSidebarContainer}>
