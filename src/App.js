@@ -119,15 +119,7 @@ class App extends Component {
                                 rank='42'
                                 name='Tiffany Ren'
                                 points='65'
-                                person={<PersonTemplate
-                                    size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
-                                    eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
-                                    mouthType='Smile'
-                                    />}
+                                person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
                                 highlight='true'
                                 />
