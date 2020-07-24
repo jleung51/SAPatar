@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+
 import Person from './components/Person';
+import LeaderboardCard from './components/LeaderboardCard';
+
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
 import styles from './styles/styles';
@@ -20,28 +23,13 @@ class App extends Component {
                             LEADERBOARD
                         </div>
 
-                        <div style={styles.sidebar.personCard}>
-                            <div style={styles.sidebar.personCardNumber}>
-                                <span style={styles.centeredText}>1</span>
-                            </div>
+                        <LeaderboardCard
+                            rank='1'
+                            name='Emily Doe'
+                            person={<Person size='75px' />}
+                            flagImg={FlagCanada}
+                            />
 
-                            {/*  Just barely smaller than the person card */}
-                            {/* <div style={styles.sidebar.personCardPic}> */}
-
-                            <div style={styles.verticalCenteredContentsLeft}  className='px-2'>
-                                <div style={styles.sidebar.personCardPicMargins}>
-                                    <Person size='75px'/>
-                                </div>
-                            </div>
-
-                            <div style={styles.verticalCenteredContentsLeft}>
-                                <span style={styles.sidebar.personCardName}>Emily Doe</span>
-                            </div>
-
-                            <div style={styles.verticalCenteredContentsRight}>
-                                <img src={FlagCanada} style={styles.sidebar.personCardFlag} />
-                            </div>
-                        </div>
 
                     </div>
 
