@@ -13,6 +13,8 @@ import EventCodeModal from './components/EventCodeModal';
 // Pictures
 import FlagCanada from './img/flags/flag-canada.png';
 import WhiteGradient from './img/white-gradient.png';
+import LboardToggleNationalGlobal from './img/toggle-national-global.png';
+import LboardToggleSort from './img/toggle-sort.png';
 
 class App extends Component {
     render() {
@@ -24,6 +26,9 @@ class App extends Component {
                         <div style={styles.sidebar.title}>
                             LEADERBOARD
                         </div>
+
+                        <img src={LboardToggleNationalGlobal} style={styles.sidebar.button}/>
+                        <img src={LboardToggleSort} style={styles.sidebar.button}/>
 
                         {/* Container for the cards, allows me to overlay the gradient on top */}
                         <div>
@@ -103,8 +108,13 @@ class App extends Component {
                                 flagImg={FlagCanada}
                                 />
 
+                        </div>
+
+                        <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
+
+                        <div style={styles.sidebar.highlightCard}>
                             <LeaderboardCard
-                                rank='6'
+                                rank='42'
                                 name='Tiffany Ren'
                                 points='65'
                                 person={<PersonTemplate
@@ -117,11 +127,9 @@ class App extends Component {
                                     mouthType='Smile'
                                     />}
                                 flagImg={FlagCanada}
+                                highlight='true'
                                 />
-
                         </div>
-
-                        <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
 
 
 

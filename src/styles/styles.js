@@ -72,10 +72,20 @@ const styles = {
 
         title: {
             width: '100%',
-            margin: '34px 0',
+            marginTop: '34px',
+            marginBottom: '22px',
 
             fontSize: '1.6em',
             fontWeight: 'bold',
+        },
+
+        button: {
+            width: '82%',
+            marginBottom: '20px',
+        },
+
+        toggleNationalGlobal: {
+            width: '100%',
         },
 
         // Match the two below, except for background color
@@ -176,7 +186,7 @@ const styles = {
             left: '0',
             zIndex: '20',
 
-            marginBottom: '30px',
+            marginBottom: '15px',
         },
     },
 
