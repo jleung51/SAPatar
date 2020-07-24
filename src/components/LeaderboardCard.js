@@ -34,6 +34,7 @@ export default class LeaderboardCard extends React.Component {
 
         // Recolor if highlight
         if (this.props.highlight) {
+            personCardStyling.margin = '12px 8px';
             personCardStyling.backgroundColor = '#427CAC';
             personCardNumberStyling.backgroundColor = '#334E69';
             personCardNumberStyling.color = '#FAFAFA';

@@ -168,6 +168,16 @@ const styles = {
             left: '0',
             zIndex: '10',
         },
+
+        highlightCard: {
+            width: '100%',
+            position: 'absolute',  // Parent is relative, to position this over
+            bottom: '0',
+            left: '0',
+            zIndex: '20',
+
+            marginBottom: '30px',
+        },
     },
 
     notSidebarContainer: {
