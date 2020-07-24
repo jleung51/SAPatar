@@ -144,8 +144,7 @@ const styles = {
             marginRight: '15px',
 
             // Content
-            fontSize: '20px',
-            fontWeight: 'bold',
+            fontSize: '24px',
             color: '#427CAC',
             lineHeight: '130%',
             textTransform: 'uppercase',
@@ -153,7 +152,7 @@ const styles = {
 
         personCardPoints: {
             // Content
-            fontSize: '14px',
+            fontSize: '16px',
             color: '#E09D03',
             lineHeight: '100%',
             textTransform: 'uppercase',
