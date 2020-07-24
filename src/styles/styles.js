@@ -16,6 +16,7 @@ const styles = {
         display: 'flex',
 
         float: 'left',
+        textAlign: 'left',
 
         // To float an element inside, assign it the following:
         // display: 'block',
@@ -28,6 +29,7 @@ const styles = {
         display: 'flex',
 
         float: 'right',
+        textAlign: 'right',
 
         // To float an element inside, assign it the following:
         // display: 'block',
@@ -77,7 +79,7 @@ const styles = {
         },
 
         personCard: {
-            height: '90px',
+            height: '83px',
 
             margin: '12px 20px',
             borderRadius: '10px',
@@ -115,20 +117,32 @@ const styles = {
             marginBottom: 'auto',
         },
 
+        personCardNameAndPointsContainer: {
+            // Float
+            display: 'block',
+            marginTop: 'auto',
+            marginBottom: 'auto',
+        },
+
         personCardName: {
             // Position
             float: 'left',
             marginRight: '15px',
 
-            // Float
-            display: 'block',
-            marginTop: 'auto',
-            marginBottom: 'auto',
-
             // Content
-            fontSize: '26px',
+            fontSize: '20px',
             fontWeight: 'bold',
-            color: '#31A493',
+            color: '#427CAC',
+            lineHeight: '130%',
+            textTransform: 'uppercase',
+        },
+
+        personCardPoints: {
+            // Content
+            fontSize: '14px',
+            color: '#E09D03',
+            lineHeight: '100%',
+            textTransform: 'uppercase',
         },
 
         personCardFlag: {

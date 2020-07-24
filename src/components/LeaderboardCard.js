@@ -8,6 +8,7 @@ import styles from '../styles/styles';
         rank='1'
         person={<Person size='75px' />}
         name='Emily Doe'
+        points='95'
         flagImg={FlagCanada}
         />
 */}
@@ -35,8 +36,12 @@ export default class LeaderboardCard extends React.Component {
                 </div>
 
                 <div style={styles.verticalCenteredContentsLeft}>
-                    {/* Name */}
-                    <span style={styles.sidebar.personCardName}>{this.props.name}</span>
+                    <div style={styles.sidebar.personCardNameAndPointsContainer}>
+                        {/* Name */}
+                        <div style={styles.sidebar.personCardName}>{this.props.name}</div>
+                        <br />
+                        <span style={styles.sidebar.personCardPoints}>{this.props.points} POINTS</span>
+                    </div>
                 </div>
 
                 <div style={styles.verticalCenteredContentsRight}>

@@ -30,8 +30,9 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='1'
                                 name='Priscilla Lee'
+                                points='95'
                                 person={<PersonTemplate
-                                    size='75px'
+                                    size='70px'
                                     topType='LongHairNotTooLong'
                                     clotheType='ShirtVNeck'
                                     />}
@@ -41,8 +42,9 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='2'
                                 name='Tiffany Ren'
+                                points='85'
                                 person={<PersonTemplate
-                                    size='75px'
+                                    size='70px'
                                     topType='LongHairStraight'
                                     hairColor='SilverGray'
                                     accessoriesType='Sunglasses'
@@ -56,8 +58,9 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='3'
                                 name='Tiffany Ren'
+                                points='85'
                                 person={<PersonTemplate
-                                    size='75px'
+                                    size='70px'
                                     topType='LongHairStraight'
                                     hairColor='SilverGray'
                                     accessoriesType='Sunglasses'
@@ -71,8 +74,9 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='4'
                                 name='Tiffany Ren'
+                                points='70'
                                 person={<PersonTemplate
-                                    size='75px'
+                                    size='70px'
                                     topType='LongHairStraight'
                                     hairColor='SilverGray'
                                     accessoriesType='Sunglasses'
@@ -86,8 +90,25 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='5'
                                 name='Tiffany Ren'
+                                points='65'
                                 person={<PersonTemplate
-                                    size='75px'
+                                    size='70px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
+
+                            <LeaderboardCard
+                                rank='6'
+                                name='Tiffany Ren'
+                                points='65'
+                                person={<PersonTemplate
+                                    size='70px'
                                     topType='LongHairStraight'
                                     hairColor='SilverGray'
                                     accessoriesType='Sunglasses'
@@ -100,9 +121,7 @@ class App extends Component {
 
                         </div>
 
-                        {/* <div > */}
-                            <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
-                        {/* </div> */}
+                        <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
 
 
 
