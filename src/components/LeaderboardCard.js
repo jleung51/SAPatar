@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import styles from '../styles/styles';
 
-// Pictures
-import FlagCanada from '../img/flags/flag-canada.png';
-
 {/*
     Example call:
 

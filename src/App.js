@@ -26,10 +26,80 @@ class App extends Component {
 
                         <LeaderboardCard
                             rank='1'
-                            name='Emily Doe'
-                            person={<PersonTemplate size='75px' />}
+                            name='Priscilla Lee'
+                            person={<PersonTemplate
+                                size='75px'
+                                topType='LongHairNotTooLong'
+                                clotheType='ShirtVNeck'
+                                />}
                             flagImg={FlagCanada}
+                            style={styles.sidebar.personCardContainer}
                             />
+
+                        <LeaderboardCard
+                            rank='2'
+                            name='Tiffany Ren'
+                            person={<PersonTemplate
+                                size='75px'
+                                topType='LongHairStraight'
+                                hairColor='SilverGray'
+                                accessoriesType='Sunglasses'
+                                eyeType='EyeRoll'
+                                facialHairType='MoustacheFancy'
+                                mouthType='Smile'
+                                />}
+                            flagImg={FlagCanada}
+                            style={styles.sidebar.personCardContainer}
+                            />
+
+                        <LeaderboardCard
+                            rank='3'
+                            name='Tiffany Ren'
+                            person={<PersonTemplate
+                                size='75px'
+                                topType='LongHairStraight'
+                                hairColor='SilverGray'
+                                accessoriesType='Sunglasses'
+                                eyeType='EyeRoll'
+                                facialHairType='MoustacheFancy'
+                                mouthType='Smile'
+                                />}
+                            flagImg={FlagCanada}
+                            style={styles.sidebar.personCardContainer}
+                            />
+
+                        <LeaderboardCard
+                            rank='4'
+                            name='Tiffany Ren'
+                            person={<PersonTemplate
+                                size='75px'
+                                topType='LongHairStraight'
+                                hairColor='SilverGray'
+                                accessoriesType='Sunglasses'
+                                eyeType='EyeRoll'
+                                facialHairType='MoustacheFancy'
+                                mouthType='Smile'
+                                />}
+                            flagImg={FlagCanada}
+                            style={styles.sidebar.personCardContainer}
+                            />
+
+                        <LeaderboardCard
+                            rank='5'
+                            name='Tiffany Ren'
+                            person={<PersonTemplate
+                                size='75px'
+                                topType='LongHairStraight'
+                                hairColor='SilverGray'
+                                accessoriesType='Sunglasses'
+                                eyeType='EyeRoll'
+                                facialHairType='MoustacheFancy'
+                                mouthType='Smile'
+                                />}
+                            flagImg={FlagCanada}
+                            style={styles.sidebar.personCardContainer}
+                            />
+
 
 
                     </div>

@@ -144,6 +144,10 @@ const styles = {
             marginTop: 'auto',
             marginBottom: 'auto',
         },
+
+        personCardContainer: {
+            marginBottom: '30px',
+        },
     },
 
     notSidebarContainer: {
