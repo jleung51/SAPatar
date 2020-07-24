@@ -78,6 +78,7 @@ const styles = {
             fontWeight: 'bold',
         },
 
+        // Match the two below, except for background color
         personCard: {
             height: '83px',
 
