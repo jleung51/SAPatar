@@ -25,15 +25,22 @@ class App extends Component {
                                 <span style={styles.centeredText}>1</span>
                             </div>
 
-
                             {/*  Just barely smaller than the person card */}
-                            <div style={styles.sidebar.personCardPic}>
-                                <Person size='70px'/>
+                            {/* <div style={styles.sidebar.personCardPic}> */}
+
+                            <div style={styles.verticalCenteredContentsLeft}  className='px-2'>
+                                <div style={styles.sidebar.personCardPicMargins}>
+                                    <Person size='75px'/>
+                                </div>
                             </div>
 
-                            <span style={styles.sidebar.personCardName}>Emily Doe</span>
+                            <div style={styles.verticalCenteredContentsLeft}>
+                                <span style={styles.sidebar.personCardName}>Emily Doe</span>
+                            </div>
 
-                            <img src={FlagCanada} style={styles.sidebar.personCardFlag} />
+                            <div style={styles.verticalCenteredContentsRight}>
+                                <img src={FlagCanada} style={styles.sidebar.personCardFlag} />
+                            </div>
                         </div>
 
                     </div>

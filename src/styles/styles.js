@@ -11,6 +11,30 @@ const styles = {
         lineHeight: 'normal',
     },
 
+    verticalCenteredContentsLeft: {
+        height: '100%',
+        display: 'flex',
+
+        float: 'left',
+
+        // To float an element inside, assign it the following:
+        // display: 'block',
+        // marginTop: 'auto',
+        // marginBottom: 'auto',
+    },
+
+    verticalCenteredContentsRight: {
+        height: '100%',
+        display: 'flex',
+
+        float: 'right',
+
+        // To float an element inside, assign it the following:
+        // display: 'block',
+        // marginTop: 'auto',
+        // marginBottom: 'auto',
+    },
+
     root: {
         backgroundImage: "url(" + Background + ")",
         backgroundRepeat: 'no-repeat',
@@ -52,7 +76,7 @@ const styles = {
         },
 
         personCard: {
-            height: '80px',
+            height: '90px',
 
             margin: '20px',
             borderRadius: '10px',
@@ -64,7 +88,7 @@ const styles = {
             // Size
             height: '100%',
             lineHeight: '100%',
-            width: '70px',  // Matches personCard height
+            width: '80px',  // Proportional to personCard height
 
             backgroundColor: '#A2D9D0',
             borderRadius: '10px',
@@ -84,36 +108,41 @@ const styles = {
             color: '#31A493',
         },
 
-        personCardPic: {
-            // Size
-            height: '100%',
-            display: 'inline-block',
-
-            // Positioning
-            float: 'left',
-            margin: '0 20px',
-
-            // Content
-            alignItems: 'center',
-            justifyContent: 'center',
-            textAlign: 'center',
+        personCardPicMargins: {
+            display: 'block',
+            marginTop: 'auto',
+            marginBottom: 'auto',
         },
 
         personCardName: {
+            // Position
             float: 'left',
-            height: '100%',
+            marginRight: '15px',
 
+            // Float
+            display: 'block',
+            marginTop: 'auto',
+            marginBottom: 'auto',
+
+            // Content
             fontSize: '26px',
             fontWeight: 'bold',
             color: '#31A493',
         },
 
         personCardFlag: {
-            width: '50px',
-            height: '50px',
+            // Size
+            width: '45px',
+            height: '45px',
 
-            float: 'right',
-            marginRight: '20px',
+            // Position
+            alignSelf: 'center',
+            marginRight: '15px',
+
+            // Float
+            display: 'block',
+            marginTop: 'auto',
+            marginBottom: 'auto',
         },
     },
 
