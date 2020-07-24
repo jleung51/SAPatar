@@ -56,6 +56,7 @@ const styles = {
             float: 'left',
             height: '100%',
             width: '450px',
+            position: 'relative',
 
             // Card
             backgroundColor: 'F0F4F9',
@@ -78,7 +79,7 @@ const styles = {
         personCard: {
             height: '90px',
 
-            margin: '20px',
+            margin: '12px 20px',
             borderRadius: '10px',
 
             backgroundColor: '#FAFAFA',
@@ -145,8 +146,12 @@ const styles = {
             marginBottom: 'auto',
         },
 
-        personCardContainer: {
-            marginBottom: '30px',
+        whiteGradient: {
+            width: '100%',
+            position: 'absolute',  // Parent is relative, to position this over
+            bottom: '0',
+            left: '0',
+            zIndex: '10',
         },
     },
 

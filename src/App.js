@@ -12,6 +12,7 @@ import EventCodeModal from './components/EventCodeModal';
 
 // Pictures
 import FlagCanada from './img/flags/flag-canada.png';
+import WhiteGradient from './img/white-gradient.png';
 
 class App extends Component {
     render() {
@@ -24,81 +25,85 @@ class App extends Component {
                             LEADERBOARD
                         </div>
 
-                        <LeaderboardCard
-                            rank='1'
-                            name='Priscilla Lee'
-                            person={<PersonTemplate
-                                size='75px'
-                                topType='LongHairNotTooLong'
-                                clotheType='ShirtVNeck'
-                                />}
-                            flagImg={FlagCanada}
-                            style={styles.sidebar.personCardContainer}
-                            />
+                        {/* Container for the cards, allows me to overlay the gradient on top */}
+                        <div>
+                            <LeaderboardCard
+                                rank='1'
+                                name='Priscilla Lee'
+                                person={<PersonTemplate
+                                    size='75px'
+                                    topType='LongHairNotTooLong'
+                                    clotheType='ShirtVNeck'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
 
-                        <LeaderboardCard
-                            rank='2'
-                            name='Tiffany Ren'
-                            person={<PersonTemplate
-                                size='75px'
-                                topType='LongHairStraight'
-                                hairColor='SilverGray'
-                                accessoriesType='Sunglasses'
-                                eyeType='EyeRoll'
-                                facialHairType='MoustacheFancy'
-                                mouthType='Smile'
-                                />}
-                            flagImg={FlagCanada}
-                            style={styles.sidebar.personCardContainer}
-                            />
+                            <LeaderboardCard
+                                rank='2'
+                                name='Tiffany Ren'
+                                person={<PersonTemplate
+                                    size='75px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
 
-                        <LeaderboardCard
-                            rank='3'
-                            name='Tiffany Ren'
-                            person={<PersonTemplate
-                                size='75px'
-                                topType='LongHairStraight'
-                                hairColor='SilverGray'
-                                accessoriesType='Sunglasses'
-                                eyeType='EyeRoll'
-                                facialHairType='MoustacheFancy'
-                                mouthType='Smile'
-                                />}
-                            flagImg={FlagCanada}
-                            style={styles.sidebar.personCardContainer}
-                            />
+                            <LeaderboardCard
+                                rank='3'
+                                name='Tiffany Ren'
+                                person={<PersonTemplate
+                                    size='75px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
 
-                        <LeaderboardCard
-                            rank='4'
-                            name='Tiffany Ren'
-                            person={<PersonTemplate
-                                size='75px'
-                                topType='LongHairStraight'
-                                hairColor='SilverGray'
-                                accessoriesType='Sunglasses'
-                                eyeType='EyeRoll'
-                                facialHairType='MoustacheFancy'
-                                mouthType='Smile'
-                                />}
-                            flagImg={FlagCanada}
-                            style={styles.sidebar.personCardContainer}
-                            />
+                            <LeaderboardCard
+                                rank='4'
+                                name='Tiffany Ren'
+                                person={<PersonTemplate
+                                    size='75px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
 
-                        <LeaderboardCard
-                            rank='5'
-                            name='Tiffany Ren'
-                            person={<PersonTemplate
-                                size='75px'
-                                topType='LongHairStraight'
-                                hairColor='SilverGray'
-                                accessoriesType='Sunglasses'
-                                eyeType='EyeRoll'
-                                facialHairType='MoustacheFancy'
-                                mouthType='Smile'
-                                />}
-                            flagImg={FlagCanada}
-                            style={styles.sidebar.personCardContainer}
-                            />
+                            <LeaderboardCard
+                                rank='5'
+                                name='Tiffany Ren'
+                                person={<PersonTemplate
+                                    size='75px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
+
+                        </div>
+
+                        {/* <div > */}
+                            <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
+                        {/* </div> */}
+
 
 
 
