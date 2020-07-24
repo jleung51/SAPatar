@@ -1,15 +1,7 @@
 'use strict';
 import * as React from 'react'
-import Avatar from 'avataaars'
+import PersonTemplate from './PersonTemplate';
 import StoreContext from '../storeContext';
-
-const styles = {
-  largeAvatar: {
-    // Sizing
-    width: '300px',
-    height: '300px',
-  }
-};
 
 export default class Person extends React.Component {
   constructor(props) {
@@ -60,9 +52,10 @@ export default class Person extends React.Component {
 
     return (
       <div>
-        <Avatar
-          style={styling}
+        <PersonTemplate
+          size={size}
           avatarStyle='Transparent'
+
           topType         ={this.state.currentOutfit.topType}
           accessoriesType ={this.state.currentOutfit.accessoriesType}
           clotheType      ={this.state.currentOutfit.clotheType}

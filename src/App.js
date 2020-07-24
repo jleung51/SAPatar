@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import PersonTemplate from './components/PersonTemplate';
 import Person from './components/Person';
 import LeaderboardCard from './components/LeaderboardCard';
 
@@ -26,7 +27,7 @@ class App extends Component {
                         <LeaderboardCard
                             rank='1'
                             name='Emily Doe'
-                            person={<Person size='75px' />}
+                            person={<PersonTemplate size='75px' />}
                             flagImg={FlagCanada}
                             />
 
@@ -39,7 +40,7 @@ class App extends Component {
                         </div>
 
                         <div style={styles.avatarContainer}>
-                            <Person />
+                            <Person size='300px'/>
                         </div>
 
                         <div style={styles.buttonContainer}>
