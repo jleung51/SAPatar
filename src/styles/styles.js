@@ -1,4 +1,4 @@
-import Background from '../img/background.jpg';
+import Background from '../img/backgrounds/fantasy.jpg';
 
 const styles = {
     outlined: {
