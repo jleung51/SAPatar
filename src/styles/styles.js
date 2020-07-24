@@ -64,7 +64,7 @@ const styles = {
 
             // Card
             backgroundColor: '#F0F4F9',
-            borderRadius: '10px',
+            borderRadius: '25px',
 
             // Content
             alignItems: 'center',
