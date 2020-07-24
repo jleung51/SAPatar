@@ -61,7 +61,7 @@ const styles = {
             position: 'relative',
 
             // Card
-            backgroundColor: 'F0F4F9',
+            backgroundColor: '#F0F4F9',
             borderRadius: '10px',
 
             // Content
@@ -84,16 +84,16 @@ const styles = {
             margin: '12px 20px',
             borderRadius: '10px',
 
-            backgroundColor: '#FAFAFA',
+            backgroundColor: '#E8ECF0',
         },
 
         personCardNumber: {
             // Size
             height: '100%',
             lineHeight: '100%',
-            width: '80px',  // Proportional to personCard height
+            width: '75px',  // Proportional to personCard height
 
-            backgroundColor: '#A2D9D0',
+            backgroundColor: '#AAC6DE',
             borderRadius: '10px',
 
             display: 'flex',
@@ -108,7 +108,7 @@ const styles = {
 
             fontSize: '32px',
             fontWeight: 'bold',
-            color: '#31A493',
+            color: '#427CAC',
         },
 
         personCardPicMargins: {
