@@ -36,8 +36,8 @@ class App extends Component {
                         <div>
                             <LeaderboardCard
                                 rank='1'
-                                name='Priscilla Lee'
-                                points='95'
+                                name='Emily Doe'
+                                points='160'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairNotTooLong'
@@ -48,8 +48,8 @@ class App extends Component {
 
                             <LeaderboardCard
                                 rank='2'
-                                name='Tiffany Ren'
-                                points='85'
+                                name='Jen Yousif'
+                                points='150'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairStraight'
@@ -64,8 +64,8 @@ class App extends Component {
 
                             <LeaderboardCard
                                 rank='3'
-                                name='Tiffany Ren'
-                                points='85'
+                                name='Fred Biser'
+                                points='110'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairStraight'
@@ -80,8 +80,8 @@ class App extends Component {
 
                             <LeaderboardCard
                                 rank='4'
-                                name='Tiffany Ren'
-                                points='70'
+                                name='Kelly Li'
+                                points='90'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairStraight'
@@ -96,8 +96,8 @@ class App extends Component {
 
                             <LeaderboardCard
                                 rank='5'
-                                name='Tiffany Ren'
-                                points='65'
+                                name='Tom Buxton'
+                                points='85'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairStraight'
@@ -118,7 +118,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='42'
                                 name='Tiffany Ren'
-                                points='65'
+                                points='25'
                                 person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
                                 highlight='true'
