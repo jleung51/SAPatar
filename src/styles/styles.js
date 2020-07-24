@@ -197,6 +197,18 @@ const styles = {
         height: '100%',
         width: '65%',  // Needs to be adjusted if other measurements change
         // outline: '1px dotted grey',
+
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+    },
+
+    medals: {
+        display: 'inline-block',
+        width: '65%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        float: 'center',
     },
 
     welcomeMessage: {

@@ -17,9 +17,14 @@ import FlagCanada from './img/flags/flag-canada.png';
 import WhiteGradient from './img/white-gradient.png';
 import LboardToggleNationalGlobal from './img/toggle-national-global.png';
 import LboardToggleSort from './img/toggle-sort.png';
+import Medals4 from './img/medals/stage-4.png';
 
 class App extends Component {
+
     render() {
+
+        const medals = Medals4;
+
         return (
             <div style={styles.root}>
             <StoreContext.Provider value={Store} >
@@ -130,6 +135,10 @@ class App extends Component {
                     <div style={styles.notSidebarContainer}>
                         <div style={styles.welcomeMessage}>
                             Welcome back, Tiffany
+                        </div>
+
+                        <div>
+                            <img src={medals} style={styles.medals}/>
                         </div>
 
                         <div style={styles.avatarContainer}>
