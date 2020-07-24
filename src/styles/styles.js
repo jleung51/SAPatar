@@ -2,7 +2,13 @@ import Background from '../img/background.jpg';
 
 const styles = {
     outlined: {
-        outline: '2px dotted red'
+        outline: '2px dotted red',
+    },
+
+    centeredText: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        lineHeight: 'normal',
     },
 
     root: {
@@ -17,7 +23,7 @@ const styles = {
 
     floatingContainer: {
         padding: '40px',
-        height: '95%',
+        height: '100%',
     },
 
     sidebar: {
@@ -43,7 +49,72 @@ const styles = {
 
             fontSize: '1.6em',
             fontWeight: 'bold',
-        }
+        },
+
+        personCard: {
+            height: '80px',
+
+            margin: '20px',
+            borderRadius: '10px',
+
+            backgroundColor: '#FAFAFA',
+        },
+
+        personCardNumber: {
+            // Size
+            height: '100%',
+            lineHeight: '100%',
+            width: '70px',  // Matches personCard height
+
+            backgroundColor: '#A2D9D0',
+            borderRadius: '10px',
+
+            display: 'flex',
+            alignItems: 'center',
+
+            float: 'left',
+
+            // Font styling
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+
+            fontSize: '32px',
+            fontWeight: 'bold',
+            color: '#31A493',
+        },
+
+        personCardPic: {
+            // Size
+            height: '100%',
+            display: 'inline-block',
+
+            // Positioning
+            float: 'left',
+            margin: '0 20px',
+
+            // Content
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+        },
+
+        personCardName: {
+            float: 'left',
+            height: '100%',
+
+            fontSize: '26px',
+            fontWeight: 'bold',
+            color: '#31A493',
+        },
+
+        personCardFlag: {
+            width: '50px',
+            height: '50px',
+
+            float: 'right',
+            marginRight: '20px',
+        },
     },
 
     notSidebarContainer: {

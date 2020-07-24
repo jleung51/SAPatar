@@ -6,6 +6,9 @@ import styles from './styles/styles';
 import CustomizeModal from './components/CustomizeModal';
 import EventCodeModal from './components/EventCodeModal';
 
+// Pictures
+import FlagCanada from './img/flags/flag-canada.png';
+
 class App extends Component {
     render() {
         return (
@@ -16,6 +19,23 @@ class App extends Component {
                         <div style={styles.sidebar.title}>
                             LEADERBOARD
                         </div>
+
+                        <div style={styles.sidebar.personCard}>
+                            <div style={styles.sidebar.personCardNumber}>
+                                <span style={styles.centeredText}>1</span>
+                            </div>
+
+
+                            {/*  Just barely smaller than the person card */}
+                            <div style={styles.sidebar.personCardPic}>
+                                <Person size='70px'/>
+                            </div>
+
+                            <span style={styles.sidebar.personCardName}>Emily Doe</span>
+
+                            <img src={FlagCanada} style={styles.sidebar.personCardFlag} />
+                        </div>
+
                     </div>
 
                     <div style={styles.notSidebarContainer}>
@@ -24,7 +44,7 @@ class App extends Component {
                         </div>
 
                         <div style={styles.avatarContainer}>
-                            <Person/>
+                            <Person />
                         </div>
 
                         <div style={styles.buttonContainer}>

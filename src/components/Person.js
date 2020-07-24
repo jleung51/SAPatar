@@ -4,7 +4,7 @@ import Avatar from 'avataaars'
 import StoreContext from '../storeContext';
 
 const styles = {
-  avatar: {
+  largeAvatar: {
     // Sizing
     width: '300px',
     height: '300px',
@@ -47,11 +47,22 @@ export default class Person extends React.Component {
   }
 
   render () {
+    let size = '300px';  // Default
+
+    if (this.props.size) {  // Override prop in call
+      size = this.props.size;
+    }
+
+    let styling = {
+      width: size,
+      height: size,
+    };
+
     return (
       <div>
         <Avatar
-          style={styles.avatar}
-          avatarStyle='Circle'
+          style={styling}
+          avatarStyle='Transparent'
           topType         ={this.state.currentOutfit.topType}
           accessoriesType ={this.state.currentOutfit.accessoriesType}
           clotheType      ={this.state.currentOutfit.clotheType}
