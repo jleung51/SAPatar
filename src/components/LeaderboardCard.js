@@ -23,16 +23,9 @@ export default class LeaderboardCard extends React.Component {
     render() {
 
         // Copy styling to avoid affecting other cards
-        let personCardStyling = {};
-        Object.assign(personCardStyling, styles.sidebar.personCard);
-
-        let personCardNumberStyling = {};
-        Object.assign(personCardNumberStyling, styles.sidebar.personCardNumber);
-
-        let personCardNameStyling = {};
-        Object.assign(personCardNameStyling, styles.sidebar.personCardName);
-
-
+        let personCardStyling = Object.assign({}, styles.sidebar.personCard);
+        let personCardNumberStyling = Object.assign({}, styles.sidebar.personCardNumber);
+        let personCardNameStyling = Object.assign({}, styles.sidebar.personCardName);
 
         // Recolor if highlight
         if (this.props.highlight) {
