@@ -117,7 +117,6 @@ class App extends Component {
                                 />
 
                         </div>
-                    </div>
 
                         <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
 
@@ -152,6 +151,9 @@ class App extends Component {
                             <CustomizeModal />
                         </div>
                     </div>
+
+                </div>
+
             </StoreContext.Provider>
             </div>
 
