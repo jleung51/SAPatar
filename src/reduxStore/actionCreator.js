@@ -18,3 +18,9 @@ export function changeHair(Hair) {
         payload: Hair
     }
 }
+
+export function levelUp() {
+    return {
+        type: 'levelUp'
+    }
+}

@@ -2,6 +2,8 @@ import React from 'react';
 import Modal from 'react-modal';
 import {Button} from 'react-bootstrap';
 
+import store from '../reduxStore/store';
+import {levelUp} from '../reduxStore/actionCreator';
 import styles from '../styles/styles';
 
 const customStyles = {
@@ -39,8 +41,11 @@ function EventCodeModal(){
   }
 
   function submitCode() {
+
     // Show celebratory modal
-    // Change medals from 4 to 5
+
+    // Level up (in Redux store)
+    store.dispatch(levelUp());
   }
 
 
