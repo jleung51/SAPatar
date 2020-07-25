@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import Person from './Person';
 import CustomizeNav from './CustomizeNav';
 import CustomizeMouthContainer from './CustomizeComponents/CustomizeMouthContainer';
+import CustomizeHairContainer from './CustomizeComponents/CustomizeHairContainer';
 import {
   Button,
   Container,
@@ -67,7 +68,7 @@ function CustomizeModal(){
               </Col>
               <Col>
               <Container>
-                <CustomizeMouthContainer />
+                <CustomizeHairContainer />
               </Container>
               </Col>
             </Row>
