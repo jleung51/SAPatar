@@ -292,7 +292,7 @@ const styles = {
 
     eventModal: {
         container: {
-            width: '650px',
+            width: '660px',
             height: '350px',
 
             justifyContent: 'center',
@@ -302,7 +302,7 @@ const styles = {
         },
 
         title: {
-            marginBottom: '60px',
+            marginBottom: '50px',
 
             fontSize: '10px',
             letterSpacing: '.2em',
@@ -315,7 +315,8 @@ const styles = {
         },
 
         input: {
-            marginTop: '30px',
+            marginTop: '25px',
+            marginBottom: '30px',
 
             width: '300px',
             height: '70px',
