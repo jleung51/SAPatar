@@ -178,7 +178,7 @@ const styles = {
             position: 'absolute',  // Parent is relative, to position this over
             bottom: '0',
             left: '0',
-            zIndex: '10',
+            zIndex: '1',
         },
 
         highlightCard: {
@@ -186,7 +186,7 @@ const styles = {
             position: 'absolute',  // Parent is relative, to position this over
             bottom: '0',
             left: '0',
-            zIndex: '20',
+            zIndex: '2',
 
             marginBottom: '15px',
         },
