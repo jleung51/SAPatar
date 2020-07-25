@@ -245,6 +245,25 @@ const styles = {
         margin: '60px 0',
     },
 
+    orangeButtonLarge: {
+        // Size/shape
+        width: '350px',
+        height: '100px',
+        borderRadius: '28px',
+
+        marginLeft: '15px',
+        marginRight: '15px',
+
+        // Color
+        background: 'linear-gradient(175.18deg, #FABC63 23.99%, #BE8502 87.39%)',
+        border: 0,
+
+        // Content
+        fontSize: '26px',
+    },
+
+
+
     modal: {
         top: '50%',
         left: '50%',

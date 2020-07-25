@@ -2,6 +2,8 @@ import React from 'react';
 import Modal from 'react-modal';
 import {Button} from 'react-bootstrap';
 
+import styles from '../styles/styles';
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -32,8 +34,9 @@ function EventCodeModal(){
 
     return (
       <div>
-        <Button onClick={openModal} variant="light" size="lg">
-            I attended an Event
+        <Button onClick={openModal}
+          style={styles.orangeButtonLarge} >
+            I attended<br/>an Event
         </Button>
 
         <Modal

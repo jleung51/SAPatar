@@ -142,12 +142,12 @@ class App extends Component {
                         </div>
 
                         <div style={styles.avatarContainer}>
-                            <Person size='300px'/>
+                            <Person size='320px'/>
                         </div>
 
                         <div style={styles.buttonContainer}>
-                            <EventCodeModal/>
-                            <CustomizeModal/>
+                            <EventCodeModal />
+                            <CustomizeModal />
                         </div>
                     </div>
                 </div>
