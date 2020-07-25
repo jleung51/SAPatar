@@ -262,6 +262,23 @@ const styles = {
         fontSize: '26px',
     },
 
+    orangeButtonSmall: {
+        // Size/shape
+        width: '190px',
+        height: '55px',
+        borderRadius: '22px',
+
+        marginLeft: '15px',
+        marginRight: '15px',
+
+        // Color
+        background: 'linear-gradient(175.24deg, #FABC63 23.99%, #C48800 87.39%)',
+        border: 0,
+
+        // Content
+        fontSize: '16px',
+    },
+
 
 
     modal: {
@@ -271,6 +288,45 @@ const styles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)'
+    },
+
+    eventModal: {
+        container: {
+            width: '650px',
+            height: '350px',
+
+            justifyContent: 'center',
+            textAlign: 'center',
+
+            fontFamily: 'Bungee',
+        },
+
+        title: {
+            marginBottom: '60px',
+
+            fontSize: '10px',
+            letterSpacing: '.2em',
+            color: '#7C7C7C',
+        },
+
+        prompt: {
+            fontSize: '34px',
+            color: '#334E69',
+        },
+
+        input: {
+            marginTop: '30px',
+
+            width: '300px',
+            height: '70px',
+
+            background: '#F0F4F9',
+            border: 0,
+
+            justifyContent: 'center',
+            textAlign: 'center',
+
+        },
     },
 };
 
