@@ -38,6 +38,11 @@ function EventCodeModal(){
     setIsOpen(false);
   }
 
+  function submitCode() {
+    // Show celebratory modal
+    // Change medals from 4 to 5
+  }
+
 
   // Copy styling to avoid affecting originaly stying
   let greyButtonSmall = {};
@@ -72,11 +77,13 @@ function EventCodeModal(){
               </label>
             </form>
 
-            <Button style={greyButtonSmall} >
+            <Button onClick={closeModal}
+              style={greyButtonSmall} >
               Cancel
             </Button>
 
-            <Button style={styles.orangeButtonSmall} >
+            <Button onClick={submitCode}
+              style={styles.orangeButtonSmall} >
               Submit Code
             </Button>
 
