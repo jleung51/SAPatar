@@ -21,13 +21,6 @@ import Medals4 from './img/medals/stage-4.png';
 
 import './styles/fonts.css';
 
-// Pictures
-import FlagCanada from './img/flags/flag-canada.png';
-import WhiteGradient from './img/white-gradient.png';
-import LboardToggleNationalGlobal from './img/toggle-national-global.png';
-import LboardToggleSort from './img/toggle-sort.png';
-import Medals4 from './img/medals/stage-4.png';
-
 class App extends Component {
     render() {
 
