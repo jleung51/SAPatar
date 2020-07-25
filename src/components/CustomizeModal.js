@@ -48,7 +48,7 @@ function CustomizeModal(){
       <div>
         <Button onClick={openModal}
           style={styles.orangeButtonLarge}>
-            Customize Avatar
+            Customize<br />My Avatar
         </Button>
 
         <Modal
@@ -56,7 +56,7 @@ function CustomizeModal(){
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
-          contentLabel="Customize Avatar"
+          contentLabel="Customize My Avatar"
         >
           <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
           <CustomizeNav/>
