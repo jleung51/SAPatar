@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import Person from './Person';
 import CustomizeNav from './CustomizeNav';
-import {Piece} from 'avataaars';
+import CustomizeMouthContainer from './CustomizeComponents/CustomizeMouthContainer';
 import {
   Button,
   Container,
@@ -66,39 +66,9 @@ function CustomizeModal(){
                 <Person/>
               </Col>
               <Col>
-                <Container>
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-
-                <Button variant="outline-light">
-                <Piece pieceType="mouth" pieceSize="100" mouthType="Eating"/>
-                </Button>
-                </Container>
+              <Container>
+                <CustomizeMouthContainer />
+              </Container>
               </Col>
             </Row>
           </Container>

@@ -1,9 +1,6 @@
-export function changeProperty(propertyToChange, changeTo) {
+export function changeMouth(mouth) {
     return {
-        type: 'changeProperty',
-        payload: {
-            propertyToChange,
-            changeTo
-        }
+        type: 'changeMouth',
+        payload: mouth
     }
 }

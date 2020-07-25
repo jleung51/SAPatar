@@ -20,17 +20,10 @@ export default class Person extends React.Component {
     });
 
     this.unsubscribe = this.context.subscribe(() => {
-      if(storeState.currentOutfit !== this.state.currentOutfit)
-        this.setState({
-          ...this.state,
-          currentOutfit: storeState.currentOutfit
-        })
-
-      if(storeState.physicalChars !== this.state.physicalChars)
-        this.setState({
-          ...this.state,
-          physicalChars: storeState.physicalChars
-        });
+       this.setState({
+        currentOutfit: storeState.currentOutfit,
+        physicalChars: storeState.physicalChars
+      });
     });
   }
 

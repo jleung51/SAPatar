@@ -1,3 +1,5 @@
+import store from "./store";
+
 const initialState = {
     wardrobe: {
         'clothes': [
@@ -27,13 +29,13 @@ const initialState = {
 
 export default function reducer (state = initialState, action) {
     switch(action.type) {
-        case 'changeProperty': return changePropertyHandler(state,action.payload);
+        case 'changeMouth': return changeMouthHandler(state, action.payload);
         default: return state;
     }
 }
 
-function changePropertyHandler(state, payload) {
-    let newState = Object.assign({}, ...state);
-    newState[payload.propertyToChange] = payload.changeTo;
+function changeMouthHandler(state, mouth) {
+    let newState = Object.assign({}, state);
+    newState.physicalChars.mouthType = mouth
     return newState;
 }
