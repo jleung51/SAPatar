@@ -9,6 +9,8 @@ import {
   Row,
 } from 'react-bootstrap';
 
+import styles from '../styles/styles';
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -17,6 +19,10 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)'
+  },
+
+  overlay: {
+    zIndex: '1000',
   }
 };
 
@@ -39,7 +45,8 @@ function CustomizeModal(){
 
     return (
       <div>
-        <Button onClick={openModal} variant="light" size="lg">
+        <Button onClick={openModal}
+          style={styles.orangeButtonLarge}>
             Customize Avatar
         </Button>
 

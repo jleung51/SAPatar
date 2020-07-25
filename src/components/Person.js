@@ -1,15 +1,7 @@
 'use strict';
 import * as React from 'react'
-import Avatar from 'avataaars'
+import PersonTemplate from './PersonTemplate';
 import StoreContext from '../storeContext';
-
-const styles = {
-  avatar: {
-    // Sizing
-    width: '300px',
-    height: '300px',
-  }
-};
 
 export default class Person extends React.Component {
   constructor(props) {
@@ -26,7 +18,7 @@ export default class Person extends React.Component {
       currentOutfit: storeState.currentOutfit,
       physicalChars: storeState.physicalChars
     });
-    
+
     this.unsubscribe = this.context.subscribe(() => {
       if(storeState.currentOutfit !== this.state.currentOutfit)
         this.setState({
@@ -47,11 +39,23 @@ export default class Person extends React.Component {
   }
 
   render () {
+    let size = '300px';  // Default
+
+    if (this.props.size) {  // Override prop in call
+      size = this.props.size;
+    }
+
+    let styling = {
+      width: size,
+      height: size,
+    };
+
     return (
       <div>
-        <Avatar
-          style={styles.avatar}
-          avatarStyle='Circle'
+        <PersonTemplate
+          size={size}
+          avatarStyle='Transparent'
+
           topType         ={this.state.currentOutfit.topType}
           accessoriesType ={this.state.currentOutfit.accessoriesType}
           clotheType      ={this.state.currentOutfit.clotheType}
