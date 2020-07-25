@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import PersonTemplate from './components/PersonTemplate';
 import Person from './components/Person';
 import LeaderboardCard from './components/LeaderboardCard';
+import Medals from './components/Medals';
 
 import Store from './reduxStore/store';
 import StoreContext from './storeContext';
@@ -17,14 +18,12 @@ import FlagCanada from './img/flags/flag-canada.png';
 import WhiteGradient from './img/white-gradient.png';
 import LboardToggleNationalGlobal from './img/toggle-national-global.png';
 import LboardToggleSort from './img/toggle-sort.png';
-import Medals4 from './img/medals/stage-4.png';
 
 import './styles/fonts.css';
 
 class App extends Component {
-    render() {
 
-        const medals = Medals4;
+    render() {
 
         return (
             <div style={styles.root}>
@@ -138,9 +137,7 @@ class App extends Component {
                             Welcome back, Tiffany
                         </div>
 
-                        <div>
-                            <img src={medals} style={styles.medals}/>
-                        </div>
+                        <Medals />
 
                         <div style={styles.avatarContainer}>
                             <Person size='320px'/>
