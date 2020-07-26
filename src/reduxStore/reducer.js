@@ -1,18 +1,18 @@
 const initialState = {
     currentOutfit: {
-        topType:'LongHairMiaWallace',
+        topType:'ShortHairShortFlat',
         accessoriesType:'Blank',
-        clotheType: 'GraphicShirt',
+        clotheType: 'BlazerShirt',
         clotheColor:'Black',
     },
 
     physicalChars: {
-        eyeType:'Cry',
-        eyebrowType:'Default',
+        eyeType:'Default',
+        eyebrowType:'RaisedExcitedNatural',
         mouthType: 'Smile',
-        skinColor:'Light',
+        skinColor:'Brown',
         facialHairType:'Blank',
-        hairColor:'Black'
+        hairColor:'Brown'
     },
 
     level: 4,

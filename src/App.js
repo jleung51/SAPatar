@@ -32,7 +32,7 @@ class App extends Component {
     componentDidMount() {
         this.setState({...this.state, level: Store.getState().level});
 
-        
+
     }
 
     componentWillUnmount() {
@@ -123,7 +123,7 @@ class App extends Component {
 
                             <LeaderboardCard
                                 rank='5'
-                                name='Tom Buxton'
+                                name='Melissa Lin'
                                 points='85'
                                 person={<PersonTemplate
                                     size='70px'
@@ -163,7 +163,7 @@ class App extends Component {
                         <div style={styles.sidebar.highlightCard}>
                             <LeaderboardCard
                                 rank='42'
-                                name='Tiffany Ren'
+                                name='Tom Buxton'
                                 points='26'
                                 person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
@@ -175,7 +175,7 @@ class App extends Component {
 
                     <div style={styles.notSidebarContainer}>
                         <div style={styles.welcomeMessage}>
-                            Welcome back, Tiffany
+                            Welcome back, Tom
                         </div>
 
                         <Medals/>
