@@ -17,6 +17,28 @@ import {
 
 import styles from '../styles/styles';
 
+// Category icons
+import Clothes from '../img/category-icons/clothes.png';
+import ClothesInactive from '../img/category-icons/clothes-inactive.png';
+import Ears from '../img/category-icons/ears.png';
+import EarsInactive from '../img/category-icons/ears-inactive.png';
+import Eyebrows from '../img/category-icons/eyebrows.png';
+import EyebrowsInactive from '../img/category-icons/eyebrows-inactive.png';
+import Eyes from '../img/category-icons/eyes.png';
+import EyesInactive from '../img/category-icons/eyes-inactive.png';
+import Glasses from '../img/category-icons/glasses.png';
+import GlassesInactive from '../img/category-icons/glasses-inactive.png';
+import Hair from '../img/category-icons/hair.png';
+import HairInactive from '../img/category-icons/hair-inactive.png';
+import Hat from '../img/category-icons/hat.png';
+import HatInactive from '../img/category-icons/hat-inactive.png';
+import Mouth from '../img/category-icons/mouth.png';
+import MouthInactive from '../img/category-icons/mouth-inactive.png';
+import Nose from '../img/category-icons/nose.png';
+import NoseInactive from '../img/category-icons/nose-inactive.png';
+import Skin from '../img/category-icons/skin.png';
+import SkinInactive from '../img/category-icons/skin-inactive.png';
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -138,7 +160,7 @@ class CustomizeModal extends Component {
             <span style={styles.customizeModal.headerButton}>
               <Button onClick={this.closeModal.bind(this)}
                 style={styles.blueButtonSmall} >
-                Saves
+                Save
               </Button>
             </span>
           </div>
@@ -155,17 +177,73 @@ class CustomizeModal extends Component {
               <Col>
               <Container style={styles.customizeModal.optionsContainer}>
 
-                <Navbar bg="light" expand="lg">
+                <Navbar expand="lg" style={styles.customizeModal.navbar}>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                      <ButtonGroup>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Hair)}> Hair </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyebrows)}> Eyebrows </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyes)}> Eyes </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.FacialHair)}> Facial Hair </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Wardrobe)}> Wardrobe </Button>
+                      <ButtonGroup style={styles.customizeModal.navbarButtonGroup}>
+
+                        {/* No function, just for show */}
+                        <Button
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Skin} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            onClick={() => this.handleClick(customizeViews.Hair)}
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Hair} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            onClick={() => this.handleClick(customizeViews.Eyebrows)}
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Eyebrows} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            onClick={() => this.handleClick(customizeViews.Eyes)}
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Eyes} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            onClick={() => this.handleClick(customizeViews.Mouth)}
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Mouth} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        {/* No function, just for show */}
+                        <Button
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={Clothes} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+
+
+                        {/* Inactive categories */}
+
+                        <Button
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={NoseInactive} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={GlassesInactive} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+                        <Button
+                            style={styles.customizeModal.navbarButton}>
+                          <img src={EarsInactive} style={styles.customizeModal.navbarButtonImage} />
+                        </Button>
+
+
+                        {/* <Button variant='light' onClick={() => this.handleClick(customizeViews.FacialHair)}> Facial Hair </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Wardrobe)}> Wardrobe </Button> */}
+
+                        {/* Hat */}
+
                       </ButtonGroup>
                     </Nav>
                   </Navbar.Collapse>

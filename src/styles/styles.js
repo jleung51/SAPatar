@@ -417,9 +417,33 @@ const styles = {
 
         navbar: {
             width: '100%',
+            height: '84px',
+            borderRadius: '11px',
 
-            margin: 0,
             padding: 0,
+            marginBottom: '30px',
+
+
+            background: '#E8ECF0',
+        },
+
+        navbarButtonGroup: {
+            marginLeft: '15px',
+        },
+
+        navbarButton: {
+            backgroundColor: 'transparent',
+
+            padding: 0,
+            marginLeft: '6px',
+            marginRight: '6px',
+
+            border: 0,
+            outline: 'none',
+        },
+
+        navbarButtonImage: {
+            width: '60px',
         },
 
         selector: {
