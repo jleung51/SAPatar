@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Modal from 'react-modal';
 import Person from './Person';
-import CustomizeNav from './CustomizeNav';
 import CustomizeMouthContainer from './CustomizeComponents/CustomizeMouthContainer';
 import CustomizeHairContainer from './CustomizeComponents/CustomizeHairContainer';
 import {
@@ -9,6 +8,9 @@ import {
   Container,
   Col,
   Row,
+  Navbar,
+  Nav,
+  ButtonGroup
 } from 'react-bootstrap';
 
 import styles from '../styles/styles';
@@ -38,6 +40,7 @@ class CustomizeModal extends Component {
     super(props)
     this.state = {
       modalIsOpen: false,
+      currentView: customizeViews.Hair
     }
 
   }
@@ -64,6 +67,24 @@ class CustomizeModal extends Component {
     })
   }
 
+  getCurrentView() {
+    switch(this.state.currentView) {
+      case(customizeViews.Hair): return <CustomizeHairContainer/>
+      case(customizeViews.Mouth): return <CustomizeMouthContainer/>
+      default: return <CustomizeMouthContainer/>
+    }
+  }
+
+  handleClick(type) {
+    switch(type) {
+      case (customizeViews.Hair): this.setState({...this.state, currentView: customizeViews.Hair});
+      break;
+      case (customizeViews.Mouth): this.setState({...this.state, currentView: customizeViews.Mouth});
+      break;
+      default: return;
+    }
+  }
+
   render() {
     return (
       <div>
@@ -79,7 +100,17 @@ class CustomizeModal extends Component {
           style={customStyles}
           contentLabel="Customize My Avatar"
         >
-          <CustomizeNav/>
+          <Navbar bg="light" expand="lg">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <ButtonGroup>
+                  <Button variant='light' onClick={() => this.handleClick(customizeViews.Hair)}> Hair </Button>
+                  <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
+                </ButtonGroup>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
           <Container>
             <Row>
               <Col>
@@ -87,7 +118,7 @@ class CustomizeModal extends Component {
               </Col>
               <Col>
               <Container>
-                <CustomizeHairContainer />
+                {this.getCurrentView()}
               </Container>
               </Col>
             </Row>
