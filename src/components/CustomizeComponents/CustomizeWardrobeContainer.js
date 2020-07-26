@@ -8,6 +8,9 @@ import {
     Button,
 } from 'react-bootstrap';
 
+import styles from '../../styles/styles';
+import '../../styles/styles.css';
+
 const pieceSize = "100";
 const pieceType = "eyes";
 const buttonVariant = "light";
@@ -42,8 +45,8 @@ class CustomizeEyesContainer extends Component {
             <div>
                 {eyesType.map( eyes => {
                     return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)}>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/> 
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/>
                         </Button>
                     )
                 })}

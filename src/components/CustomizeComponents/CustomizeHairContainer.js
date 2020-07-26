@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap';
 
 import styles from '../../styles/styles';
+import '../../styles/styles.css';
 
 const pieceSize = "100";
 const pieceType = "top";
@@ -59,7 +60,7 @@ class CustomizeMouthContainer extends Component {
             <div style={styles.customizeModal.selector} >
                 {hairstyles.map( hairstyle => {
                     return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(hairstyle)}>
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(hairstyle)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
                         <Piece pieceType={pieceType} pieceSize={pieceSize} topType={hairstyle}/>
                         </Button>
                     )

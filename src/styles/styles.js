@@ -451,6 +451,21 @@ const styles = {
             overflowY: 'auto',  // Allow this section to scroll
         },
 
+        selectorItem: {
+            width: '150px',
+            height: '150px',
+
+            borderRadius: '30px',
+
+            // Outline
+            // Using actual 'outline' fails because the corners cannot be rounded
+            boxShadow: '0 0 0 1px #AAC6DE',
+
+            margin: '7px',
+
+            backgroundColor: 'transparent',
+        },
+
     },
 };
 

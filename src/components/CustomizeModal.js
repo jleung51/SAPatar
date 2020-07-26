@@ -57,10 +57,6 @@ const customStyles = {
     overflowY: 'hidden',  // Prevent this modal from scrolling up/down
   },
 
-  dialog: {
-    outline: '2px dotted red',
-  },
-
   overlay: {
     zIndex: '1000',
   }

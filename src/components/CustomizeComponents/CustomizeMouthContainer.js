@@ -8,6 +8,9 @@ import {
     Button,
 } from 'react-bootstrap';
 
+import styles from '../../styles/styles';
+import '../../styles/styles.css';
+
 const pieceSize = "100";
 const pieceType = "mouth";
 const buttonVariant = "light";
@@ -42,8 +45,8 @@ class CustomizeMouthContainer extends Component {
             <div>
                 {mouthType.map( mouth => {
                     return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(mouth)}>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} mouthType={mouth}/> 
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(mouth)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} mouthType={mouth}/>
                         </Button>
                     )
                 })}

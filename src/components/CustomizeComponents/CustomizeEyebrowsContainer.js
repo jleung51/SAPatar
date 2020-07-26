@@ -8,6 +8,9 @@ import {
     Button,
 } from 'react-bootstrap';
 
+import styles from '../../styles/styles';
+import '../../styles/styles.css';
+
 const pieceSize = "100";
 const pieceType = "eyebrows";
 const buttonVariant = "light";
@@ -43,8 +46,8 @@ class CustomizeEyebrowsContainer extends Component {
             <div>
                 {eyebrowType.map( eyebrow => {
                     return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyebrow)}>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyebrowType={eyebrow}/> 
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyebrow)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyebrowType={eyebrow}/>
                         </Button>
                     )
                 })}
