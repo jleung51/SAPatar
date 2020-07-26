@@ -8,6 +8,8 @@ import {
     Button,
 } from 'react-bootstrap';
 
+import styles from '../../styles/styles';
+
 const pieceSize = "100";
 const pieceType = "top";
 const buttonVariant = "light";
@@ -54,11 +56,11 @@ class CustomizeMouthContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div style={styles.customizeModal.selector} >
                 {hairstyles.map( hairstyle => {
                     return (
                         <Button variant={buttonVariant} onClick={()=> this.handleClick(hairstyle)}>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} topType={hairstyle}/> 
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} topType={hairstyle}/>
                         </Button>
                     )
                 })}

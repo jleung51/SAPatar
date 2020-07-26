@@ -279,6 +279,23 @@ const styles = {
         fontSize: '16px',
     },
 
+    blueButtonSmall: {
+        // Size/shape
+        width: '200px',
+        height: '55px',
+        borderRadius: '12px',
+
+        marginLeft: '15px',
+        marginRight: '15px',
+
+        // Color
+        background: '#427CAC',
+        border: 0,
+
+        // Content
+        fontSize: '24px',
+    },
+
 
 
     modal: {
@@ -328,6 +345,61 @@ const styles = {
             textAlign: 'center',
 
         },
+    },
+
+    customizeModal: {
+
+        header: {
+            // Size
+            width: '100%',
+            height: '115px',
+            paddingTop: '20px',
+
+            // Positioning
+            marginBottom: '50px',
+            display: 'flex',
+
+            // Content
+            background: '#E8ECF0',
+
+            alignItems: 'center',
+
+            fontFamily: 'Bungee',
+            color: '#334E69',
+        },
+
+        headerText: {
+            marginLeft: '70px',
+
+            fontSize: '38px',
+        },
+
+        headerButton: {
+            marginLeft: 'auto',  // Floats right in displayflex
+            marginRight: '30px',
+        },
+
+        thingICantRemove: {
+            background: '#E8ECF0',
+            margin: 0,
+        },
+
+        optionsContainer: {
+            height: '80%',
+        },
+
+        navbar: {
+            width: '100%',
+
+            margin: 0,
+            padding: 0,
+        },
+
+        selector: {
+            height: '85%',
+            overflowY: 'auto',  // Allow this section to scroll
+        },
+
     },
 };
 

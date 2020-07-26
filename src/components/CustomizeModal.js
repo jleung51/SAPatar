@@ -20,7 +20,19 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+
+    padding: '0',
+
+    width: '88%',
+    height: '88%',
+    borderRadius: '50px',
+
+    overflowY: 'hidden',  // Prevent this modal from scrolling up/down
+  },
+
+  dialog: {
+    outline: '2px dotted red',
   },
 
   overlay: {
@@ -59,16 +71,39 @@ function CustomizeModal(){
           style={customStyles}
           contentLabel="Customize My Avatar"
         >
-          <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
-          <CustomizeNav/>
+
+          <h2 ref={_subtitle => (subtitle = _subtitle)} style={styles.customizeModal.thingICantRemove}></h2>
+
+          <div style={styles.customizeModal.header}>
+            <span style={styles.customizeModal.headerText}>Customize your avatar</span>
+
+            <span style={styles.customizeModal.headerButton}>
+              <Button onClick={closeModal}
+                style={styles.blueButtonSmall} >
+                Save
+              </Button>
+            </span>
+          </div>
+
           <Container>
+
+            <Row>
+              <Col>
+              </Col>
+
+            </Row>
+
             <Row>
               <Col>
                 <Person/>
               </Col>
               <Col>
-              <Container>
+              <Container style={styles.customizeModal.optionsContainer}>
+
+                <CustomizeNav />
+
                 <CustomizeHairContainer />
+
               </Container>
               </Col>
             </Row>
