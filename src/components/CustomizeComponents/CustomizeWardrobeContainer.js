@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Piece} from 'avataaars';
 import StoreContext from '../../storeContext';
 import {
-    changeEyes
+    changeClothes
 } from '../../reduxStore/actionCreator';
 import {
     Button,
@@ -12,49 +12,47 @@ import styles from '../../styles/styles';
 import '../../styles/styles.css';
 
 const pieceSize = "100";
-const pieceType = "eyes";
+const pieceType = "clothe";
 const buttonVariant = "light";
-const eyesType = [
-    "Close",
-    "Cry",
-    "Default",
-    "Dizzy",
-    "EyeRoll",
-    "Happy",
-    "Hearts",
-    "Side",
-    "Squint",
-    "Surprised",
-    "Wink",
-    "WinkWacky",
-];
 
-class CustomizeEyesContainer extends Component {
+class CustomizeWardrobeContainer extends Component {
     constructor(props) {
         super(props);
         this.renderContainer;
     }
 
-    handleClick(eyesType) {
+    handleClick(clotheType, clotheColor) {
         const store = this.context;
-        store.dispatch(changeEyes(eyesType));
+        store.dispatch(changeClothes(clotheType, clotheColor));
     }
 
     render() {
         return (
             <div>
-                {eyesType.map( eyes => {
-                    return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/>
-                        </Button>
-                    )
-                })}
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('Hoodie', 'Pink')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='Hoodie' clotheColor='Pink'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('ShirtCrewNeck')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='ShirtCrewNeck'clotheColor='Blue02'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('BlazerSweater')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='BlazerSweater'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('GraphicShirt', 'Black')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='GraphicShirt' clotheColor='Black'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('CollarSweater', 'Blue03')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='CollarSweater' clotheColor='Blue03'/>
+                </Button>
             </div>
         )
     }
 }
 
-CustomizeEyesContainer.contextType = StoreContext;
+CustomizeWardrobeContainer.contextType = StoreContext;
 
-export default CustomizeEyesContainer;
+export default CustomizeWardrobeContainer;

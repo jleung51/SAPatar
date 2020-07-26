@@ -9,7 +9,7 @@ const initialState = {
 
     currentOutfit: {
         topType:'LongHairMiaWallace',
-        accessoriesType:'Prescription02',
+        accessoriesType:'Blank',
         clotheType: 'BlazerShirt',
         clotheColor:'PastelBlue',
     },
@@ -33,9 +33,17 @@ export default function reducer (state = initialState, action) {
         case 'changeHair' : return changeHairHandler(state, action.payload);
         case 'changeEyebrows': return changeEyebrowsHandler(state, action.payload);
         case 'changeEyes': return changeEyesHandler(state, action.payload);
+        case 'changeClothe': return changeClotheHandler(state, action.payload);
         case 'levelUp': return levelUpHandler(state);
         default: return state;
     }
+}
+
+function changeClotheHandler(state, clothe) {
+    let newState = Object.assign({}, state);
+    newState.currentOutfit.clotheType = clothe.Clothe;
+    if(clothe.Color !== 'Blank') newState.currentOutfit.clotheColor = clothe.Color;
+    return newState;
 }
 
 function changeMouthHandler(state, mouth) {

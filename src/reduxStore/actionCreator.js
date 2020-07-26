@@ -26,6 +26,16 @@ export function changeEyebrows(Eyebrow) {
     }
 }
 
+export function changeClothes(Clothe, Color) {
+    return {
+        type: 'changeClothe',
+        payload: {
+            Clothe,
+            Color: Color === undefined ? 'Blank' : Color
+        }
+    }
+}
+
 export function levelUp() {
     return {
         type: 'levelUp'

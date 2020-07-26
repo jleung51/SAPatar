@@ -5,6 +5,7 @@ import CustomizeMouthContainer from './CustomizeComponents/CustomizeMouthContain
 import CustomizeEyebrowsContainer from './CustomizeComponents/CustomizeEyebrowsContainer';
 import CustomizeEyesContainer from './CustomizeComponents/CustomizeEyesContainer';
 import CustomizeHairContainer from './CustomizeComponents/CustomizeHairContainer';
+import CustomizeWardrobeContainer from './CustomizeComponents/CustomizeWardrobeContainer';
 import {
   Button,
   Container,
@@ -211,14 +212,12 @@ class CustomizeModal extends Component {
 
                         {/* No function, just for show */}
                         <Button
+                            onClick={() => this.handleClick(customizeViews.Wardrobe)}
                             style={styles.customizeModal.navbarButton}>
                           <img src={Clothes} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
-
-
                         {/* Inactive categories */}
-
                         <Button
                             style={styles.customizeModal.navbarButton}>
                           <img src={NoseInactive} style={styles.customizeModal.navbarButtonImage} />
@@ -233,13 +232,6 @@ class CustomizeModal extends Component {
                             style={styles.customizeModal.navbarButton}>
                           <img src={EarsInactive} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
-
-
-                        {/* <Button variant='light' onClick={() => this.handleClick(customizeViews.FacialHair)}> Facial Hair </Button>
-                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Wardrobe)}> Wardrobe </Button> */}
-
-                        {/* Hat */}
-
                       </ButtonGroup>
                     </Nav>
                   </Navbar.Collapse>

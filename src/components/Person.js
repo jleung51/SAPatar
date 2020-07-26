@@ -38,11 +38,6 @@ export default class Person extends React.Component {
       size = this.props.size;
     }
 
-    let styling = {
-      width: size,
-      height: size,
-    };
-
     return (
       <div>
         <PersonTemplate

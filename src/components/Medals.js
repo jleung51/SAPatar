@@ -7,7 +7,6 @@ import styles from '../styles/styles';
 // Images
 import Medals4 from '../img/medals/stage-4.png';
 import Medals5 from '../img/medals/stage-5.png';
-import FlagCanada from '../img/flags/flag-canada.png';
 
 export default class Medals extends React.Component {
 
