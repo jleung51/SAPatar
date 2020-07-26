@@ -6,6 +6,9 @@ import {levelUp} from '../reduxStore/actionCreator';
 import styles from '../styles/styles';
 import StoreContext from '../storeContext';
 
+import ClothesIcon from '../img/category-icons/clothes-selected.png';
+import LevelUpMedal5 from '../img/medals/congrats-medal-5.png';
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -16,6 +19,8 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)',
 
     borderRadius: '50px',
+
+    overflow: 'hidden',  // Don't show confetti outside window
   },
 
   overlay: {
@@ -86,7 +91,7 @@ class EventCodeModal extends Component {
           style={styles.orangeButtonLarge} >
             I attended<br/>an Event
         </Button>
-  
+
         <Modal
           isOpen={this.state.isCodeEntryOpen}
           onAfterOpen={this.afterOpenModal.bind(this)}
@@ -98,23 +103,25 @@ class EventCodeModal extends Component {
             <div style={styles.eventModal.title}>
               Code Entry
             </div>
-  
+
             <form>
               <label style={styles.eventModal.prompt}>
               Enter your event code:
                 <input type="text" name="eventCode" style={styles.eventModal.input} />
               </label>
             </form>
-  
-            <Button onClick={this.closeModal.bind(this)}
-              style={greyButtonSmall} >
-              Cancel
-            </Button>
-  
-            <Button onClick={this.submitCode.bind(this)}
-              style={styles.orangeButtonSmall} >
-              Submit Code
-            </Button>
+
+            <div style={styles.eventModal.buttonContainer}>
+              <Button onClick={this.closeModal.bind(this)}
+                style={greyButtonSmall} >
+                Cancel
+              </Button>
+              <Button onClick={this.submitCode.bind(this)}
+                style={styles.orangeButtonSmall} >
+                Submit Code
+              </Button>
+            </div>
+
           </div>
         </Modal>
 
@@ -129,18 +136,27 @@ class EventCodeModal extends Component {
             <div style={styles.eventModal.title}>
               Code Confirmation
             </div>
-  
-            <p>you got some new shit my friend</p>
-  
-            <Button onClick={this.soundsGood.bind(this)}
-              style={greyButtonSmall} >
-              Sounds Good
-            </Button>
-  
-            <Button onClick={()=> alert('feature in development')}
-              style={styles.orangeButtonSmall} >
-              Change My Avatar
-            </Button>
+
+            <div style={styles.eventModal.prompt}>
+              Event Code Confirmed
+            </div>
+
+            <div style={styles.eventModal.message}>
+              <p>
+                Unlock <span style={styles.orangeText}> clothing</span> <img src={ClothesIcon} style={styles.eventModal.clothesIcon} /> for your avatar
+              </p>
+            </div>
+
+            <div style={styles.eventModal.buttonContainer}>
+              <Button onClick={this.soundsGood.bind(this)}
+                style={greyButtonSmall} >
+                Sounds Good
+              </Button>
+              <Button onClick={()=> alert('feature in development')}
+                style={styles.orangeButtonSmall} >
+                Change My Avatar
+              </Button>
+            </div>
           </div>
         </Modal>
 
@@ -152,19 +168,28 @@ class EventCodeModal extends Component {
           contentLabel="Event Code Modal"
         >
           <div style={styles.eventModal.container}>
-            <div style={styles.eventModal.title}>
-              Congrats
-            </div>
             <Confetti
               width='1000px'
               height='1000px'
             />
-            <p> you did it you sexy fuck </p>
-  
-            <Button onClick={this.closeModal.bind(this)}
-              style={greyButtonSmall} >
-              Dismiss
-            </Button>
+
+            <div style={styles.eventModal.title}>
+              Code Confirmation
+            </div>
+
+            <img src={LevelUpMedal5} style={styles.eventModal.medal5} />
+
+            <div style={styles.eventModal.prompt}>
+              Congratulations! <br/> You are now <span style={styles.orangeText}>Level 5</span>
+            </div>
+
+            <div style={styles.eventModal.buttonContainer}>
+              <Button onClick={this.closeModal.bind(this)}
+                style={greyButtonSmall} >
+                Dismiss
+              </Button>
+            </div>
+
           </div>
         </Modal>
       </div>
