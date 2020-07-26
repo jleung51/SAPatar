@@ -2,48 +2,48 @@ import React, {Component} from 'react';
 import {Piece} from 'avataaars';
 import StoreContext from '../../storeContext';
 import {
-    changeMouth
+    changeEyes
 } from '../../reduxStore/actionCreator';
 import {
     Button,
 } from 'react-bootstrap';
 
 const pieceSize = "100";
-const pieceType = "mouth";
+const pieceType = "eyes";
 const buttonVariant = "light";
-const mouthType = [
-    "Eating",
-    "Sad",
-    "Smile",
+const eyesType = [
+    "Close",
+    "Cry",
     "Default",
-    "Disbelief",
-    "ScreamOpen",
-    "Twinkle",
-    "Serious",
-    "Vomit",
-    "Grimace",
-    "Tongue",
-    "Concerned",
+    "Dizzy",
+    "EyeRoll",
+    "Happy",
+    "Hearts",
+    "Side",
+    "Squint",
+    "Surprised",
+    "Wink",
+    "WinkWacky",
 ];
 
-class CustomizeMouthContainer extends Component {
+class CustomizeEyesContainer extends Component {
     constructor(props) {
         super(props);
         this.renderContainer;
     }
 
-    handleClick(mouthType) {
+    handleClick(eyesType) {
         const store = this.context;
-        store.dispatch(changeMouth(mouthType));
+        store.dispatch(changeEyes(eyesType));
     }
 
     render() {
         return (
             <div>
-                {mouthType.map( mouth => {
+                {eyesType.map( eyes => {
                     return (
-                        <Button variant={buttonVariant} onClick={()=> this.handleClick(mouth)}>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} mouthType={mouth}/> 
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)}>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/> 
                         </Button>
                     )
                 })}
@@ -52,6 +52,6 @@ class CustomizeMouthContainer extends Component {
     }
 }
 
-CustomizeMouthContainer.contextType = StoreContext;
+CustomizeEyesContainer.contextType = StoreContext;
 
-export default CustomizeMouthContainer;
+export default CustomizeEyesContainer;

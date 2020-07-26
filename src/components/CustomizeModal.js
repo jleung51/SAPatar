@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Modal from 'react-modal';
 import Person from './Person';
 import CustomizeMouthContainer from './CustomizeComponents/CustomizeMouthContainer';
+import CustomizeEyebrowsContainer from './CustomizeComponents/CustomizeEyebrowsContainer';
+import CustomizeEyesContainer from './CustomizeComponents/CustomizeEyesContainer';
 import CustomizeHairContainer from './CustomizeComponents/CustomizeHairContainer';
 import {
   Button,
@@ -44,7 +46,13 @@ const customStyles = {
 
 const customizeViews = Object.freeze({
   Hair: 1,
-  Mouth: 2,
+  Eyebrows: 2,
+  Eyes: 3,
+  Mouth: 4,
+  FacialHair: 5,
+  Color: 6,
+  Accessories: 7,
+  Wardrobe: 8,
 })
 
 class CustomizeModal extends Component {
@@ -82,14 +90,20 @@ class CustomizeModal extends Component {
   getCurrentView() {
     switch(this.state.currentView) {
       case(customizeViews.Hair): return <CustomizeHairContainer/>
+      case(customizeViews.Eyebrows) : return <CustomizeEyebrowsContainer/>
+      case(customizeViews.Eyes) : return <CustomizeEyesContainer/>
       case(customizeViews.Mouth): return <CustomizeMouthContainer/>
-      default: return <CustomizeMouthContainer/>
+      default: return <CustomizeHairContainer/>
     }
   }
 
   handleClick(type) {
     switch(type) {
       case (customizeViews.Hair): this.setState({...this.state, currentView: customizeViews.Hair});
+      break;
+      case (customizeViews.Eyebrows): this.setState({...this.state, currentView: customizeViews.Eyebrows});
+      break;
+      case (customizeViews.Eyes): this.setState({...this.state, currentView: customizeViews.Eyes});
       break;
       case (customizeViews.Mouth): this.setState({...this.state, currentView: customizeViews.Mouth});
       break;
@@ -117,9 +131,9 @@ class CustomizeModal extends Component {
             <span style={styles.customizeModal.headerText}>Customize your avatar</span>
 
             <span style={styles.customizeModal.headerButton}>
-              <Button onClick={this.closeModal}
+              <Button onClick={this.closeModal.bind(this)}
                 style={styles.blueButtonSmall} >
-                Save
+                Saves
               </Button>
             </span>
           </div>
@@ -142,6 +156,8 @@ class CustomizeModal extends Component {
                     <Nav className="mr-auto">
                       <ButtonGroup>
                         <Button variant='light' onClick={() => this.handleClick(customizeViews.Hair)}> Hair </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyebrows)}> Eyebrows </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyes)}> Eyes </Button>
                         <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
                       </ButtonGroup>
                     </Nav>

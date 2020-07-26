@@ -19,6 +19,13 @@ export function changeHair(Hair) {
     }
 }
 
+export function changeEyebrows(Eyebrow) {
+    return {
+        type: 'changeEyebrows',
+        payload: Eyebrow
+    }
+}
+
 export function levelUp() {
     return {
         type: 'levelUp'
