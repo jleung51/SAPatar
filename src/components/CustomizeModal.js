@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Modal from 'react-modal';
 import Person from './Person';
 import CustomizeNav from './CustomizeNav';
@@ -28,38 +28,57 @@ const customStyles = {
   }
 };
 
-function CustomizeModal(){
-  var subtitle;
-  const [modalIsOpen,setIsOpen] = React.useState(false);
+const customizeViews = Object.freeze({
+  Hair: 1,
+  Mouth: 2,
+})
 
-  function openModal() {
-    setIsOpen(true);
+class CustomizeModal extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      modalIsOpen: false,
+    }
+
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+  componentDidMount() {
+    Modal.setAppElement('body');
   }
 
-  function closeModal(){
-    setIsOpen(false);
+  openModal() {
+    this.setState({
+      ...this.state,
+      modalIsOpen: true,
+    })
   }
 
+  afterOpenModal() {
+
+  }
+
+  closeModal(){
+    this.setState({
+      ...this.state,
+      modalIsOpen: false,
+    })
+  }
+
+  render() {
     return (
       <div>
-        <Button onClick={openModal}
+        <Button onClick={this.openModal.bind(this)}
           style={styles.orangeButtonLarge}>
             Customize<br />My Avatar
         </Button>
 
         <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal.bind(this)}
+          onRequestClose={this.closeModal.bind(this)}
           style={customStyles}
           contentLabel="Customize My Avatar"
         >
-          <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
           <CustomizeNav/>
           <Container>
             <Row>
@@ -75,7 +94,8 @@ function CustomizeModal(){
           </Container>
         </Modal>
       </div>
-    );
+    )
+  }
 }
 
 export default CustomizeModal
