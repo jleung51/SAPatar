@@ -5,6 +5,10 @@ const styles = {
         outline: '2px dotted red',
     },
 
+    orangeText: {
+        color: '#E09D03',
+    },
+
     centeredText: {
         display: 'inline-block',
         verticalAlign: 'middle',
@@ -331,9 +335,27 @@ const styles = {
             color: '#334E69',
         },
 
+        message: {
+            justifyContent: 'center',
+            textAlign: 'center',
+
+            display: 'flex',
+            marginTop: '30px',
+
+            fontSize: '25px',
+            color: '#334E69',
+        },
+
+        clothesIcon: {
+            width: '40px',
+            height: '40px',
+
+            margin: '0 6px',
+            verticalAlign: 'middle',
+        },
+
         input: {
             marginTop: '25px',
-            marginBottom: '30px',
 
             width: '300px',
             height: '70px',
@@ -343,7 +365,20 @@ const styles = {
 
             justifyContent: 'center',
             textAlign: 'center',
+        },
 
+        buttonContainer: {
+            width: '100%',
+
+            display: 'inline-block',
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            marginBottom: '40px',
+        },
+
+        medal5: {
+            width: '60px',
         },
     },
 
@@ -447,7 +482,7 @@ const styles = {
         },
 
         selector: {
-            height: '82%',
+            height: '36%',
             overflowY: 'auto',  // Allow this section to scroll
         },
 
