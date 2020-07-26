@@ -30,9 +30,13 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.setState({...this.state, level: Store.getState().level});
+        this.setState({level: Store.getState().level});
 
-        
+        this.unsubscribe = Store.subscribe(() => {
+            this.setState({
+                level: Store.getState().level
+            })
+        })
     }
 
     componentWillUnmount() {
@@ -57,7 +61,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='1'
                                 name='Emily Doe'
-                                points='160'
+                                points='290'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairFroBand'
@@ -73,7 +77,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='2'
                                 name='Jen Yousif'
-                                points='150'
+                                points='285'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='Hijab'
@@ -90,7 +94,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='3'
                                 name='Fred Biser'
-                                points='110'
+                                points='270'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='ShortHairTheCaesarSidePart'
@@ -106,7 +110,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='4'
                                 name='Kelly Li'
-                                points='90'
+                                points='260'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='LongHairNotTooLong'
@@ -124,7 +128,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='5'
                                 name='Tom Buxton'
-                                points='85'
+                                points='255'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='Frizzle'
@@ -140,7 +144,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='6'
                                 name='Jeffrey Leung'
-                                points='80'
+                                points='240'
                                 person={<PersonTemplate
                                     size='70px'
                                     topType='ShortHairShortFlat'
@@ -162,9 +166,9 @@ class App extends Component {
 
                         <div style={styles.sidebar.highlightCard}>
                             <LeaderboardCard
-                                rank='42'
+                                rank= {this.state.level === 5 ? '12' : '13'}
                                 name='Tiffany Ren'
-                                points='26'
+                                points={this.state.level === 5 ? '200' : '190'}
                                 person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
                                 highlight='true'
