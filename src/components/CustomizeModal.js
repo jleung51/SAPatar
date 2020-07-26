@@ -22,7 +22,19 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+
+    padding: '0',
+
+    width: '88%',
+    height: '88%',
+    borderRadius: '50px',
+
+    overflowY: 'hidden',  // Prevent this modal from scrolling up/down
+  },
+
+  dialog: {
+    outline: '2px dotted red',
   },
 
   overlay: {
@@ -100,25 +112,47 @@ class CustomizeModal extends Component {
           style={customStyles}
           contentLabel="Customize My Avatar"
         >
-          <Navbar bg="light" expand="lg">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <ButtonGroup>
-                  <Button variant='light' onClick={() => this.handleClick(customizeViews.Hair)}> Hair </Button>
-                  <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
-                </ButtonGroup>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
+
+          <div style={styles.customizeModal.header}>
+            <span style={styles.customizeModal.headerText}>Customize your avatar</span>
+
+            <span style={styles.customizeModal.headerButton}>
+              <Button onClick={this.closeModal}
+                style={styles.blueButtonSmall} >
+                Save
+              </Button>
+            </span>
+          </div>
+
           <Container>
+
+            <Row>
+              <Col>
+              </Col>
+
+            </Row>
+
             <Row>
               <Col>
                 <Person/>
               </Col>
               <Col>
-              <Container>
+              <Container style={styles.customizeModal.optionsContainer}>
+
+                <Navbar bg="light" expand="lg">
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                      <ButtonGroup>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Hair)}> Hair </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
+                      </ButtonGroup>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Navbar>
+
                 {this.getCurrentView()}
+
               </Container>
               </Col>
             </Row>

@@ -23,7 +23,7 @@ export default class Medals extends React.Component {
       level: storeState.level,
     });
 
-    this.subscribe = this.context.subscribe(() => {
+    this.unsubscribe = this.context.subscribe(() => {
        this.setState({
           level: storeState.level,
       });
