@@ -60,8 +60,12 @@ class App extends Component {
                                 points='160'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairNotTooLong'
-                                    clotheType='ShirtVNeck'
+                                    topType='LongHairFroBand'
+                                    clotheType='Overall'
+                                    eyeType='Squint'
+                                    eyebrowType='RaisedExcited'
+                                    mouthType='Twinkle'
+                                    skinColor='Brown'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -72,12 +76,13 @@ class App extends Component {
                                 points='150'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
-                                    eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
-                                    mouthType='Smile'
+                                    topType='Hijab'
+                                    clotheType='ShirtCrewNeck'
+                                    clotheColor='Blue02'
+                                    eyeType='Surprised'
+                                    eyebrowType='RaisedExcited'
+                                    mouthType='Tongue'
+                                    skinColor='Light'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -88,12 +93,12 @@ class App extends Component {
                                 points='110'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
+                                    topType='ShortHairTheCaesarSidePart'
+                                    clotheType='CollarSweater'
                                     eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
-                                    mouthType='Smile'
+                                    eyebrowType='RaisedExcited'
+                                    mouthType='Eating'
+                                    skinColor='DarkBrown'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -104,12 +109,14 @@ class App extends Component {
                                 points='90'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
-                                    eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
-                                    mouthType='Smile'
+                                    topType='LongHairNotTooLong'
+                                    clotheType='Hoodie'
+                                    clotheColor='Blue02'
+                                    clotheColor='Heather'
+                                    eyeType='Happy'
+                                    eyebrowType='RaisedExcited'
+                                    mouthType='Twinkle'
+                                    skinColor='Pale'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -120,12 +127,12 @@ class App extends Component {
                                 points='85'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
-                                    eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
+                                    topType='Frizzle'
+                                    clotheType='Blazer'
+                                    eyeType='Wink'
+                                    eyebrowType='UpDown'
                                     mouthType='Smile'
+                                    skinColor='Brown'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -136,12 +143,15 @@ class App extends Component {
                                 points='80'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='LongHairStraight'
-                                    hairColor='SilverGray'
-                                    accessoriesType='Sunglasses'
-                                    eyeType='EyeRoll'
-                                    facialHairType='MoustacheFancy'
+                                    topType='ShortHairShortFlat'
+                                    accessoriesType='Prescription02'
+                                    hairColor='Black'
+                                    facialHairType='Blank'
+                                    clotheType='BlazerShirt'
+                                    eyeType='Happy'
+                                    eyebrowType='DefaultNatural'
                                     mouthType='Smile'
+                                    skinColor='Pale'
                                     />}
                                 flagImg={FlagCanada}
                                 />
