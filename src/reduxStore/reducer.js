@@ -1,5 +1,3 @@
-import { changeEyebrows } from "./actionCreator";
-
 const initialState = {
     wardrobe: {
         'clothes': [
@@ -67,7 +65,8 @@ function changeEyesHandler(state, eyes) {
 function levelUpHandler(state) {
     let newState = Object.assign({}, state);
     if (newState.level < 5) {
-        newState.level++;
+        newState.level = newState.level + 1;
     }
+
     return newState;
 }

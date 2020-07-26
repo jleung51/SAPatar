@@ -153,7 +153,7 @@ class App extends Component {
                             Welcome back, Tiffany
                         </div>
 
-                        <Medals />
+                        <Medals/>
 
                         <div style={styles.avatarContainer}>
                             <Person size='320px'/>

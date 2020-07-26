@@ -6,6 +6,7 @@ import styles from '../styles/styles';
 
 // Images
 import Medals4 from '../img/medals/stage-4.png';
+import Medals5 from '../img/medals/stage-5.png';
 import FlagCanada from '../img/flags/flag-canada.png';
 
 export default class Medals extends React.Component {
@@ -13,7 +14,7 @@ export default class Medals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        level: 0,
+      level: 0
     }
   }
 
@@ -25,8 +26,8 @@ export default class Medals extends React.Component {
 
     this.unsubscribe = this.context.subscribe(() => {
        this.setState({
-          level: storeState.level,
-      });
+          level: this.context.getState().level,
+        });
     });
   }
 
@@ -35,15 +36,9 @@ export default class Medals extends React.Component {
   }
 
   render () {
-
-    let medals = Medals4;
-    if (this.state.level === 5) {
-        medals = FlagCanada;
-    }
-
     return (
       <div>
-        <img src={medals} style={styles.medals}/>
+        {this.state.level === 5 ? <img src={Medals5} style={styles.medals}/> : <img src={Medals4} style={styles.medals}/>}
       </div>
     )
   }

@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import {Button} from 'react-bootstrap';
 import Confetti from 'react-confetti'
-
-import store from '../reduxStore/store';
 import {levelUp} from '../reduxStore/actionCreator';
 import styles from '../styles/styles';
+import StoreContext from '../storeContext';
 
 const customStyles = {
   content : {
@@ -68,6 +67,8 @@ class EventCodeModal extends Component {
       isCodeEntryOpen: false,
       isCodeConfirmationOpen: true,
     })
+
+    this.context.dispatch(levelUp());
   }
 
   soundsGood() {
@@ -155,8 +156,8 @@ class EventCodeModal extends Component {
               Congrats
             </div>
             <Confetti
-              width='500px'
-              height='500px'
+              width='1000px'
+              height='1000px'
             />
             <p> you did it you sexy fuck </p>
   
@@ -170,5 +171,6 @@ class EventCodeModal extends Component {
     );
   }
 }
+EventCodeModal.contextType = StoreContext;
 
 export default EventCodeModal
