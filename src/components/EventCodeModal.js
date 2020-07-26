@@ -73,7 +73,6 @@ class EventCodeModal extends Component {
       isCodeConfirmationOpen: true,
     })
 
-    this.context.dispatch(levelUp());
   }
 
   soundsGood() {
@@ -82,6 +81,8 @@ class EventCodeModal extends Component {
       isCodeConfirmationOpen: false,
       isCongratulationsOpen: true,
     })
+
+    this.context.dispatch(levelUp());
   }
 
   render() {
