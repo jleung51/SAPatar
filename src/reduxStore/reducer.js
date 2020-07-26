@@ -1,21 +1,13 @@
 const initialState = {
-    wardrobe: {
-        'clothes': [
-        'BlazerShirt',
-        'BlazerSweater',
-        'ShirtVNeck',
-        ],
-    },
-
     currentOutfit: {
         topType:'LongHairMiaWallace',
         accessoriesType:'Blank',
-        clotheType: 'BlazerShirt',
-        clotheColor:'PastelBlue',
+        clotheType: 'GraphicShirt',
+        clotheColor:'Black',
     },
 
     physicalChars: {
-        eyeType:'Happy',
+        eyeType:'Cry',
         eyebrowType:'Default',
         mouthType: 'Smile',
         skinColor:'Light',

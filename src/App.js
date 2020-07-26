@@ -22,9 +22,24 @@ import LboardToggleSort from './img/toggle-sort.png';
 import './styles/fonts.css';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            level: 0,
+        }
+    }
+
+    componentDidMount() {
+        this.setState({...this.state, level: Store.getState().level});
+
+        
+    }
+
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
 
     render() {
-
         return (
             <div style={styles.root}>
             <StoreContext.Provider value={Store} >
@@ -139,7 +154,7 @@ class App extends Component {
                             <LeaderboardCard
                                 rank='42'
                                 name='Tiffany Ren'
-                                points='25'
+                                points='26'
                                 person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
                                 highlight='true'
@@ -157,6 +172,7 @@ class App extends Component {
 
                         <div style={styles.avatarContainer}>
                             <Person size='320px'/>
+                            <img src={FlagCanada}/>
                         </div>
 
                         <div style={styles.buttonContainer}>
