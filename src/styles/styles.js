@@ -234,7 +234,6 @@ const styles = {
         // Contents
         alignItems: 'center',
         justifyContent: 'center',
-        // outline: '1px dotted grey',
     },
 
     buttonContainer: {
@@ -356,7 +355,6 @@ const styles = {
             paddingTop: '20px',
 
             // Positioning
-            marginBottom: '50px',
             display: 'flex',
 
             // Content
@@ -384,8 +382,36 @@ const styles = {
             margin: 0,
         },
 
+        floatingContainer: {
+            marginTop: '50px',
+            marginLeft: '25px',
+            marginRight: '25px',
+            marginBottom: '0px',
+        },
+
+        personColumn: {
+            margin: 0,
+            padding: 0,
+        },
+
+        personBackground: {
+            // Size matches <Person /> size
+            width: '500px',
+            height: '500px',
+
+            borderRadius: '30px',
+            background: '#E8ECF0',
+
+            // Positioning
+            display: 'flex',
+
+            // Contents
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+
         optionsContainer: {
-            height: '80%',
+            height: '100%',
         },
 
         navbar: {
@@ -396,7 +422,7 @@ const styles = {
         },
 
         selector: {
-            height: '85%',
+            height: '82%',
             overflowY: 'auto',  // Allow this section to scroll
         },
 

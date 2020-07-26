@@ -124,18 +124,15 @@ class CustomizeModal extends Component {
             </span>
           </div>
 
-          <Container>
-
-            <Row>
-              <Col>
+          <Container fluid>
+            <Row style={styles.customizeModal.floatingContainer}>
+              <Col xs={5} style={styles.customizeModal.personColumn}>
+                <div style={styles.customizeModal.personBackground}>
+                  <Person size='500px' />
+                  {/* Size matches personBackground card size */}
+                </div>
               </Col>
 
-            </Row>
-
-            <Row>
-              <Col>
-                <Person/>
-              </Col>
               <Col>
               <Container style={styles.customizeModal.optionsContainer}>
 
