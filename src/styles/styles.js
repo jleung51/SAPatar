@@ -70,6 +70,7 @@ const styles = {
             alignItems: 'center',
             justifyContent: 'center',
             textAlign: 'center',
+            overflow: 'hidden',
         },
 
         title: {

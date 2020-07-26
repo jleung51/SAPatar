@@ -115,6 +115,22 @@ class App extends Component {
                                 flagImg={FlagCanada}
                                 />
 
+                            <LeaderboardCard
+                                rank='6'
+                                name='Jeffrey Leung'
+                                points='80'
+                                person={<PersonTemplate
+                                    size='70px'
+                                    topType='LongHairStraight'
+                                    hairColor='SilverGray'
+                                    accessoriesType='Sunglasses'
+                                    eyeType='EyeRoll'
+                                    facialHairType='MoustacheFancy'
+                                    mouthType='Smile'
+                                    />}
+                                flagImg={FlagCanada}
+                                />
+
                         </div>
 
                         <img src={WhiteGradient} style={styles.sidebar.whiteGradient} />
