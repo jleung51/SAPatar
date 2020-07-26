@@ -179,7 +179,7 @@ class App extends Component {
 
                     <div style={styles.notSidebarContainer}>
                         <div style={styles.welcomeMessage}>
-                            Welcome back, Tiffany
+                            Welcome back, Tom
                         </div>
 
                         <Medals/>
