@@ -29,6 +29,7 @@
     "bootstrap": "^4.5.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
+    "react-confetti": "^6.0.0",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",
     "redux": "^4.0.5"

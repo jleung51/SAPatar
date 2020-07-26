@@ -93,6 +93,8 @@ class CustomizeModal extends Component {
       case(customizeViews.Eyebrows) : return <CustomizeEyebrowsContainer/>
       case(customizeViews.Eyes) : return <CustomizeEyesContainer/>
       case(customizeViews.Mouth): return <CustomizeMouthContainer/>
+      case(customizeViews.FacialHair): return <CustomizeFacialhairContainer/>
+      case(customizeViews.Wardrobe): return <CustomizeWardrobeContainer/>
       default: return <CustomizeHairContainer/>
     }
   }
@@ -107,6 +109,9 @@ class CustomizeModal extends Component {
       break;
       case (customizeViews.Mouth): this.setState({...this.state, currentView: customizeViews.Mouth});
       break;
+      case (customizeViews.FacialHair):  this.setState({...this.state, currentView: customizeViews.FacialHair});
+      break;
+      case (customizeViews.Wardrobe): this.setState({...this.state, currentView: customizeViews.Wardrobe});
       default: return;
     }
   }
@@ -159,6 +164,8 @@ class CustomizeModal extends Component {
                         <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyebrows)}> Eyebrows </Button>
                         <Button variant='light' onClick={() => this.handleClick(customizeViews.Eyes)}> Eyes </Button>
                         <Button variant='light' onClick={() => this.handleClick(customizeViews.Mouth)}> Mouth </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.FacialHair)}> Facial Hair </Button>
+                        <Button variant='light' onClick={() => this.handleClick(customizeViews.Wardrobe)}> Wardrobe </Button>
                       </ButtonGroup>
                     </Nav>
                   </Navbar.Collapse>
