@@ -12,6 +12,7 @@ import CustomizeModal from './components/CustomizeModal';
 import EventCodeModal from './components/EventCodeModal';
 
 import './styles/fonts.css';
+import './styles/styles.css';
 
 // Pictures
 import FlagCanada from './img/flags/flag-canada.png';
@@ -79,7 +80,7 @@ class App extends Component {
     render() {
         return (
             <div style={this.state.backgroundStyle}>
-                
+
             <StoreContext.Provider value={Store} >
                 <div style={styles.floatingContainer}>
                     <div style={styles.sidebar.container}>

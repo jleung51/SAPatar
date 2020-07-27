@@ -3,3 +3,23 @@
 .selector-item-hover:focus {
   box-shadow: 0 0 0 3px #E09D03 !important;
 }
+
+
+
+/* Customized scrollbar */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  border-radius: 2px;
+  background: #AAC6DE;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #427CAC;
+}
