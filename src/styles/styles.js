@@ -1,4 +1,6 @@
-import Background from '../img/backgrounds/fantasy.jpg';
+// Backgrounds
+import level4BG from '../img/backgrounds/level4.jpg';
+import level5BG from '../img/backgrounds/level5.jpg';
 
 const styles = {
     outlined: {
@@ -41,11 +43,25 @@ const styles = {
         // marginBottom: 'auto',
     },
 
-    root: {
-        backgroundImage: "url(" + Background + ")",
+    level4background: {
+        backgroundImage: "url(" + level4BG + ")",
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
+
+        height: '100%',
+        margin: '0',
+        padding: '0',
+
+        fontFamily: 'Bungee',
+    },
+
+    level5background: {
+        backgroundImage: "url(" + level5BG + ")",
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+
         height: '100%',
         margin: '0',
         padding: '0',

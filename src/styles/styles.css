@@ -1,5 +1,4 @@
 /* For inline styles which cannot be styled with JSX */
-
 .selector-item-hover:focus {
   box-shadow: 0 0 0 3px #E09D03 !important;
 }
