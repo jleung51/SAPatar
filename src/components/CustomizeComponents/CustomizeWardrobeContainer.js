@@ -34,6 +34,18 @@ class CustomizeWardrobeContainer extends Component {
                 <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='SapIxpBlazer'/>
                 </Button>
 
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('SapBestRunHoodie')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='SapBestRunHoodie'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('SapCrewneckShirt')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='SapCrewneckShirt'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('SapVneckShirt')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='SapVneckShirt'/>
+                </Button>
+
                 <Button variant={buttonVariant} onClick={()=> this.handleClick('Hoodie', 'Pink')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
                 <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='Hoodie' clotheColor='Pink'/>
                 </Button>
