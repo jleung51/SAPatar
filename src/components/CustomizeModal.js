@@ -21,24 +21,44 @@ import styles from '../styles/styles';
 // Category icons
 import Clothes from '../img/category-icons/clothes.png';
 import ClothesInactive from '../img/category-icons/clothes-inactive.png';
+import ClothesSelected from '../img/category-icons/clothes-selected.png';
+
 import Ears from '../img/category-icons/ears.png';
 import EarsInactive from '../img/category-icons/ears-inactive.png';
+import EarsSelected from '../img/category-icons/ears-selected.png';
+
 import Eyebrows from '../img/category-icons/eyebrows.png';
 import EyebrowsInactive from '../img/category-icons/eyebrows-inactive.png';
+import EyebrowsSelected from '../img/category-icons/eyebrows-selected.png';
+
 import Eyes from '../img/category-icons/eyes.png';
 import EyesInactive from '../img/category-icons/eyes-inactive.png';
+import EyesSelected from '../img/category-icons/eyes-selected.png';
+
 import Glasses from '../img/category-icons/glasses.png';
 import GlassesInactive from '../img/category-icons/glasses-inactive.png';
+import GlassesSelected from '../img/category-icons/glasses-selected.png';
+
 import Hair from '../img/category-icons/hair.png';
 import HairInactive from '../img/category-icons/hair-inactive.png';
+import HairSelected from '../img/category-icons/hair-selected.png';
+
 import Hat from '../img/category-icons/hat.png';
 import HatInactive from '../img/category-icons/hat-inactive.png';
+import HatSelected from '../img/category-icons/hat-selected.png';
+
 import Mouth from '../img/category-icons/mouth.png';
 import MouthInactive from '../img/category-icons/mouth-inactive.png';
+import MouthSelected from '../img/category-icons/mouth-selected.png';
+
 import Nose from '../img/category-icons/nose.png';
 import NoseInactive from '../img/category-icons/nose-inactive.png';
+import NoseSelected from '../img/category-icons/nose-selected.png';
+
 import Skin from '../img/category-icons/skin.png';
 import SkinInactive from '../img/category-icons/skin-inactive.png';
+import SkinSelected from '../img/category-icons/skin-selected.png';
+
 
 const customStyles = {
   content : {
@@ -75,9 +95,10 @@ const customizeViews = Object.freeze({
   Wardrobe: 8,
 });
 
+// Initial state
 let categoryButtons = {
   skin: Skin,
-  hair: Hair,
+  hair: HairSelected,
   eyebrows: Eyebrows,
   eyes: Eyes,
   mouth: Mouth,
@@ -143,21 +164,25 @@ class CustomizeModal extends Component {
       case (customizeViews.Hair):
         this.setState({...this.state, currentView: customizeViews.Hair});
         this.deactivateAllButtons();
+        categoryButtons.hair = HairSelected;
         break;
 
       case (customizeViews.Eyebrows):
         this.setState({...this.state, currentView: customizeViews.Eyebrows});
         this.deactivateAllButtons();
+        categoryButtons.eyebrows = EyebrowsSelected;
         break;
 
       case (customizeViews.Eyes):
         this.setState({...this.state, currentView: customizeViews.Eyes});
         this.deactivateAllButtons();
+        categoryButtons.eyes = EyesSelected;
         break;
 
       case (customizeViews.Mouth):
         this.setState({...this.state, currentView: customizeViews.Mouth});
         this.deactivateAllButtons();
+        categoryButtons.mouth = MouthSelected;
         break;
 
       case (customizeViews.FacialHair):
@@ -168,6 +193,7 @@ class CustomizeModal extends Component {
       case (customizeViews.Wardrobe):
         this.setState({...this.state, currentView: customizeViews.Wardrobe});
         this.deactivateAllButtons();
+        categoryButtons.wardrobe = ClothesSelected;
         break;
 
       default:
