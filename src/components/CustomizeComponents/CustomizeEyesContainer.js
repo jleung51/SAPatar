@@ -13,6 +13,7 @@ import '../../styles/styles.css';
 
 const pieceSize = "100";
 const pieceType = "eyes";
+const buttonVariant = "light";
 const eyesType = [
     "Close",
     "Cry",
@@ -44,7 +45,7 @@ class CustomizeEyesContainer extends Component {
             <div>
                 {eyesType.map( eyes => {
                     return (
-                        <Button onClick={()=> this.handleClick(eyes)}  style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                        <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)}  style={styles.customizeModal.selectorItem} className='selector-item-hover'>
                         <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/>
                         </Button>
                     )
