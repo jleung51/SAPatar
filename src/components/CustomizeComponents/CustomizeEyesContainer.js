@@ -11,7 +11,7 @@ import {
 import styles from '../../styles/styles';
 import '../../styles/styles.css';
 
-const pieceSize = "100";
+const pieceSize = "270";
 const pieceType = "eyes";
 const buttonVariant = "light";
 const eyesType = [
@@ -28,6 +28,10 @@ const eyesType = [
     "Wink",
     "WinkWacky",
 ];
+
+const customStyles = {
+    marginTop: '30px',
+};
 
 class CustomizeEyesContainer extends Component {
     constructor(props) {
@@ -46,7 +50,8 @@ class CustomizeEyesContainer extends Component {
                 {eyesType.map( eyes => {
                     return (
                         <Button variant={buttonVariant} onClick={()=> this.handleClick(eyes)}  style={styles.customizeModal.selectorItem} className='selector-item-hover'>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}/>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyeType={eyes}
+                            style={customStyles} />
                         </Button>
                     )
                 })}

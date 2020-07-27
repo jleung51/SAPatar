@@ -11,7 +11,7 @@ import {
 import styles from '../../styles/styles';
 import '../../styles/styles.css';
 
-const pieceSize = "100";
+const pieceSize = "270";
 const pieceType = "eyebrows";
 const buttonVariant = "light";
 const eyebrowType = [
@@ -30,6 +30,10 @@ const eyebrowType = [
     "UpDownNatural",
 ];
 
+const customStyles = {
+    marginTop: '50px',
+};
+
 class CustomizeEyebrowsContainer extends Component {
     constructor(props) {
         super(props);
@@ -47,7 +51,8 @@ class CustomizeEyebrowsContainer extends Component {
                 {eyebrowType.map( eyebrow => {
                     return (
                         <Button variant={buttonVariant} onClick={()=> this.handleClick(eyebrow)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyebrowType={eyebrow}/>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} eyebrowType={eyebrow}
+                            style={customStyles} />
                         </Button>
                     )
                 })}

@@ -11,7 +11,7 @@ import {
 import styles from '../../styles/styles';
 import '../../styles/styles.css';
 
-const pieceSize = "100";
+const pieceSize = "270";
 const pieceType = "mouth";
 const buttonVariant = "light";
 const mouthType = [
@@ -28,6 +28,10 @@ const mouthType = [
     "Tongue",
     "Concerned",
 ];
+
+const customStyles = {
+    marginTop: '0px',
+};
 
 class CustomizeMouthContainer extends Component {
     constructor(props) {
@@ -46,7 +50,8 @@ class CustomizeMouthContainer extends Component {
                 {mouthType.map( mouth => {
                     return (
                         <Button variant={buttonVariant} onClick={()=> this.handleClick(mouth)} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
-                        <Piece pieceType={pieceType} pieceSize={pieceSize} mouthType={mouth}/>
+                        <Piece pieceType={pieceType} pieceSize={pieceSize} mouthType={mouth}
+                            style={customStyles} />
                         </Button>
                     )
                 })}
