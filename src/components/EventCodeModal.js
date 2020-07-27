@@ -76,7 +76,7 @@ class EventCodeModal extends Component {
 
   }
 
-  dismiss() {
+  close() {
     this.setState({
       ...this.state,
       isCodeConfirmationOpen: false,
@@ -150,9 +150,9 @@ class EventCodeModal extends Component {
             </div>
 
             <div style={styles.eventModal.buttonContainer}>
-              <Button onClick={this.dismiss.bind(this)}
+              <Button onClick={this.close.bind(this)}
                 style={greyButtonSmall} >
-                Dismiss
+                Close
               </Button>
               <Button onClick={()=> alert('feature in development')}
                 style={styles.orangeButtonSmall} >
@@ -188,7 +188,7 @@ class EventCodeModal extends Component {
             <div style={styles.eventModal.buttonContainer}>
               <Button onClick={this.closeModal.bind(this)}
                 style={greyButtonSmall} >
-                Dismiss
+                Close
               </Button>
             </div>
 
