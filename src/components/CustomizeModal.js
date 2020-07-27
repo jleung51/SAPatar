@@ -73,7 +73,16 @@ const customizeViews = Object.freeze({
   Color: 6,
   Accessories: 7,
   Wardrobe: 8,
-})
+});
+
+let categoryButtons = {
+  skin: Skin,
+  hair: Hair,
+  eyebrows: Eyebrows,
+  eyes: Eyes,
+  mouth: Mouth,
+  wardrobe: Clothes,
+};
 
 class CustomizeModal extends Component {
   constructor(props) {
@@ -119,20 +128,50 @@ class CustomizeModal extends Component {
     }
   }
 
+  deactivateAllButtons() {
+    categoryButtons.skin = Skin;
+    categoryButtons.hair = Hair;
+    categoryButtons.eyebrows = Eyebrows;
+    categoryButtons.eyes = Eyes;
+    categoryButtons.mouth = Mouth;
+    categoryButtons.wardrobe = Clothes;
+  }
+
   handleClick(type) {
     switch(type) {
-      case (customizeViews.Hair): this.setState({...this.state, currentView: customizeViews.Hair});
-      break;
-      case (customizeViews.Eyebrows): this.setState({...this.state, currentView: customizeViews.Eyebrows});
-      break;
-      case (customizeViews.Eyes): this.setState({...this.state, currentView: customizeViews.Eyes});
-      break;
-      case (customizeViews.Mouth): this.setState({...this.state, currentView: customizeViews.Mouth});
-      break;
-      case (customizeViews.FacialHair):  this.setState({...this.state, currentView: customizeViews.FacialHair});
-      break;
-      case (customizeViews.Wardrobe): this.setState({...this.state, currentView: customizeViews.Wardrobe});
-      default: return;
+
+      case (customizeViews.Hair):
+        this.setState({...this.state, currentView: customizeViews.Hair});
+        this.deactivateAllButtons();
+        break;
+
+      case (customizeViews.Eyebrows):
+        this.setState({...this.state, currentView: customizeViews.Eyebrows});
+        this.deactivateAllButtons();
+        break;
+
+      case (customizeViews.Eyes):
+        this.setState({...this.state, currentView: customizeViews.Eyes});
+        this.deactivateAllButtons();
+        break;
+
+      case (customizeViews.Mouth):
+        this.setState({...this.state, currentView: customizeViews.Mouth});
+        this.deactivateAllButtons();
+        break;
+
+      case (customizeViews.FacialHair):
+        this.setState({...this.state, currentView: customizeViews.FacialHair});
+        this.deactivateAllButtons();
+        break;
+
+      case (customizeViews.Wardrobe):
+        this.setState({...this.state, currentView: customizeViews.Wardrobe});
+        this.deactivateAllButtons();
+        break;
+
+      default:
+        return;
     }
   }
 
@@ -185,35 +224,35 @@ class CustomizeModal extends Component {
                         <Button
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover'>
-                          <img src={Skin} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.skin} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Hair)}
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover'>
-                          <img src={Hair} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.hair} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Eyebrows)}
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover' >
-                          <img src={Eyebrows} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.eyebrows} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Eyes)}
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover'>
-                          <img src={Eyes} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.eyes} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Mouth)}
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover'>
-                          <img src={Mouth} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.mouth} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         {/* No function, just for show */}
@@ -221,7 +260,7 @@ class CustomizeModal extends Component {
                             onClick={() => this.handleClick(customizeViews.Wardrobe)}
                             style={styles.customizeModal.navbarButton}
                             className='navbar-button-hover'>
-                          <img src={Clothes} style={styles.customizeModal.navbarButtonImage} />
+                          <img src={categoryButtons.wardrobe} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         {/* Inactive categories */}
