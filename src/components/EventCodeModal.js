@@ -75,7 +75,7 @@ class EventCodeModal extends Component {
 
   }
 
-  soundsGood() {
+  dismiss() {
     this.setState({
       ...this.state,
       isCodeConfirmationOpen: false,
@@ -149,9 +149,9 @@ class EventCodeModal extends Component {
             </div>
 
             <div style={styles.eventModal.buttonContainer}>
-              <Button onClick={this.soundsGood.bind(this)}
+              <Button onClick={this.dismiss.bind(this)}
                 style={greyButtonSmall} >
-                Sounds Good
+                Dismiss
               </Button>
               <Button onClick={()=> alert('feature in development')}
                 style={styles.orangeButtonSmall} >
