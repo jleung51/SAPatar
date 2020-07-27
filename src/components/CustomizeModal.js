@@ -183,54 +183,63 @@ class CustomizeModal extends Component {
 
                         {/* No function, just for show */}
                         <Button
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={Skin} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Hair)}
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={Hair} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Eyebrows)}
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover' >
                           <img src={Eyebrows} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Eyes)}
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={Eyes} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
                             onClick={() => this.handleClick(customizeViews.Mouth)}
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={Mouth} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         {/* No function, just for show */}
                         <Button
                             onClick={() => this.handleClick(customizeViews.Wardrobe)}
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={Clothes} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         {/* Inactive categories */}
                         <Button
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={NoseInactive} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={GlassesInactive} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
 
                         <Button
-                            style={styles.customizeModal.navbarButton}>
+                            style={styles.customizeModal.navbarButton}
+                            className='navbar-button-hover'>
                           <img src={EarsInactive} style={styles.customizeModal.navbarButtonImage} />
                         </Button>
                       </ButtonGroup>
