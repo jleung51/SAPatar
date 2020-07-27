@@ -1,6 +1,6 @@
 'use strict';
 import * as React from 'react'
-import Avatar from 'avataaars'
+import Avatar from 'sapataaars'
 
 {/*
   Generic customizable Avatar. Each call creates a new instance.

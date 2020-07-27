@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Piece} from 'avataaars';
+import {Piece} from 'sapataaars';
 import StoreContext from '../../storeContext';
 import {
     changeClothes
@@ -29,12 +29,21 @@ class CustomizeWardrobeContainer extends Component {
     render() {
         return (
             <div>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('SapIxpBlazer')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='SapIxpBlazer'/>
+                </Button>
+
                 <Button variant={buttonVariant} onClick={()=> this.handleClick('Hoodie', 'Pink')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
                 <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='Hoodie' clotheColor='Pink'/>
                 </Button>
 
                 <Button variant={buttonVariant} onClick={()=> this.handleClick('ShirtCrewNeck')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
                 <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='ShirtCrewNeck'clotheColor='Blue02'/>
+                </Button>
+
+                <Button variant={buttonVariant} onClick={()=> this.handleClick('BlazerSweater')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>
+                <Piece pieceType={pieceType} pieceSize={pieceSize} clotheType='BlazerSweater'/>
                 </Button>
 
                 <Button variant={buttonVariant} onClick={()=> this.handleClick('BlazerSweater')} style={styles.customizeModal.selectorItem} className='selector-item-hover'>

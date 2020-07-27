@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Piece} from 'avataaars';
+import {Piece} from 'sapataaars';
 import StoreContext from '../../storeContext';
 import {
     changeEyebrows
