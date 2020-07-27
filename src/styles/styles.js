@@ -1,4 +1,3 @@
-import Background from '../img/backgrounds/fantasy.jpg';
 
 const styles = {
     outlined: {
@@ -39,18 +38,6 @@ const styles = {
         // display: 'block',
         // marginTop: 'auto',
         // marginBottom: 'auto',
-    },
-
-    root: {
-        backgroundImage: "url(" + Background + ")",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
-        height: '100%',
-        margin: '0',
-        padding: '0',
-
-        fontFamily: 'Bungee',
     },
 
     floatingContainer: {

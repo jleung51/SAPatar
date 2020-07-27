@@ -1,18 +1,18 @@
 const initialState = {
     currentOutfit: {
-        topType:'ShortHairShortFlat',
+        topType:'LongHairBigHair',
         accessoriesType:'Blank',
-        clotheType: 'BlazerShirt',
-        clotheColor:'Black',
+        clotheType: 'ShirtCrewNeck',
+        clotheColor:'PastelYellow',
     },
 
     physicalChars: {
         eyeType:'Default',
         eyebrowType:'RaisedExcitedNatural',
         mouthType: 'Smile',
-        skinColor:'Brown',
+        skinColor:'Tanned',
         facialHairType:'Blank',
-        hairColor:'Brown'
+        hairColor:'Black'
     },
 
     level: 4,

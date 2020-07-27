@@ -19,6 +19,10 @@ import WhiteGradient from './img/white-gradient.png';
 import LboardToggleNationalGlobal from './img/toggle-national-global.png';
 import LboardToggleSort from './img/toggle-sort.png';
 
+// Backgrounds
+import level4BG from './img/backgrounds/level4.jpg';
+import level5BG from './img/backgrounds/level5.jpg';
+
 import './styles/fonts.css';
 
 class App extends Component {
@@ -26,16 +30,45 @@ class App extends Component {
         super(props);
         this.state = {
             level: 0,
+            backgroundStyle: {
+                backgroundImage: "url(" + level4BG + ")",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                height: '100%',
+                margin: '0',
+                padding: '0',
+                fontFamily: 'Bungee',
+            }
         }
     }
 
     componentDidMount() {
-        this.setState({level: Store.getState().level});
+        this.setState({
+            ...this.state,
+            level: Store.getState().level});
 
         this.unsubscribe = Store.subscribe(() => {
             this.setState({
+                ...this.state,
                 level: Store.getState().level
-            })
+            });
+
+            if(Store.getState().level === 5) {
+                this.setState({
+                    ...this.state,
+                    backgroundStyle: {
+                        backgroundImage: "url(" + level5BG + ")",
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        backgroundAttachment: 'fixed',
+                        height: '100%',
+                        margin: '0',
+                        padding: '0',
+                        fontFamily: 'Bungee',
+                    }
+                })
+            }
         })
     }
 
@@ -45,7 +78,8 @@ class App extends Component {
 
     render() {
         return (
-            <div style={styles.root}>
+            <div style={this.state.backgroundStyle}>
+                
             <StoreContext.Provider value={Store} >
                 <div style={styles.floatingContainer}>
                     <div style={styles.sidebar.container}>
@@ -131,12 +165,12 @@ class App extends Component {
                                 points='255'
                                 person={<PersonTemplate
                                     size='70px'
-                                    topType='Frizzle'
+                                    topType='ShortHairFrizzle'
                                     clotheType='Blazer'
                                     eyeType='Wink'
                                     eyebrowType='UpDown'
                                     mouthType='Smile'
-                                    skinColor='Brown'
+                                    skinColor='Pale'
                                     />}
                                 flagImg={FlagCanada}
                                 />
@@ -167,7 +201,7 @@ class App extends Component {
                         <div style={styles.sidebar.highlightCard}>
                             <LeaderboardCard
                                 rank= {this.state.level === 5 ? '12' : '13'}
-                                name='Tiffany Ren'
+                                name='Ana Mendez'
                                 points={this.state.level === 5 ? '200' : '190'}
                                 person={<Person size='70px'/>}
                                 flagImg={FlagCanada}
@@ -179,7 +213,7 @@ class App extends Component {
 
                     <div style={styles.notSidebarContainer}>
                         <div style={styles.welcomeMessage}>
-                            Welcome back, Tom
+                            Welcome back, Ana
                         </div>
 
                         <Medals/>
