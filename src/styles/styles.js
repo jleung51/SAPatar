@@ -44,7 +44,8 @@ const styles = {
     },
 
     level4background: {
-        backgroundImage: "url(" + level4BG + ")",
+        backgroundImage: 'linear-gradient(180deg, rgba(52, 52, 52, 0.765) 0%, rgba(52, 52, 52, 0.765) 100%), url(' + level4BG + ')',
+
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
@@ -57,7 +58,7 @@ const styles = {
     },
 
     level5background: {
-        backgroundImage: "url(" + level5BG + ")",
+        backgroundImage: 'linear-gradient(180deg, rgba(52, 52, 52, 0.765) 0%, rgba(52, 52, 52, 0.765) 100%), url(' + level5BG + ')',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
