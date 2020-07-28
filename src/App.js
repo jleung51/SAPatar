@@ -206,7 +206,10 @@ class App extends Component {
 
                         <div style={styles.buttonContainer}>
                             <EventCodeModal />
-                            <CustomizeModal />
+                            <CustomizeModal
+                                buttonStyle={styles.orangeButtonLarge}
+                                textLine1='Customize'
+                                textLine2='My Avatar' />
                         </div>
                     </div>
 

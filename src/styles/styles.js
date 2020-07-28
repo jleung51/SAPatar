@@ -295,6 +295,7 @@ const styles = {
 
         // Content
         fontSize: '26px',
+        lineHeight: '1.3em',
     },
 
     orangeButtonSmall: {
@@ -305,6 +306,7 @@ const styles = {
 
         marginLeft: '15px',
         marginRight: '15px',
+        display: 'inline-block',
 
         // Color
         background: 'linear-gradient(175.24deg, #FABC63 23.99%, #C48800 87.39%)',
@@ -312,6 +314,7 @@ const styles = {
 
         // Content
         fontSize: '16px',
+        lineHeight: '1.2em',
     },
 
     blueButtonSmall: {

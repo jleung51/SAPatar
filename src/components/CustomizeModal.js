@@ -105,6 +105,16 @@ let categoryButtons = {
   wardrobe: Clothes,
 };
 
+/*
+ * Example call:
+ *
+  <CustomizeModal
+      buttonStyle={styles.orangeButtonLarge}
+      textLine1='Customize'
+      textLine2='My Avatar' />
+  *
+  */
+
 class CustomizeModal extends Component {
   constructor(props) {
     super(props)
@@ -202,11 +212,16 @@ class CustomizeModal extends Component {
   }
 
   render() {
+    let text = (this.props.textLine1);
+    if (this.props.textLine2) {
+      text = (<span>{this.props.textLine1} <br /> {this.props.textLine2}</span>);
+    }
+
     return (
-      <div>
+      <span>
         <Button onClick={this.openModal.bind(this)}
-          style={styles.orangeButtonLarge}>
-            Customize<br />My Avatar
+          style={this.props.buttonStyle}>
+            {text}
         </Button>
 
         <Modal
@@ -319,7 +334,7 @@ class CustomizeModal extends Component {
             </Row>
           </Container>
         </Modal>
-      </div>
+      </span>
     )
   }
 }

@@ -8,6 +8,7 @@ import StoreContext from '../storeContext';
 
 import ClothesIcon from '../img/category-icons/clothes-selected.png';
 import LevelUpMedal5 from '../img/medals/congrats-medal-5.png';
+import CustomizeModal from './CustomizeModal';
 
 const customStyles = {
   content : {
@@ -154,10 +155,12 @@ class EventCodeModal extends Component {
                 style={greyButtonSmall} >
                 Close
               </Button>
-              <Button onClick={()=> alert('feature in development')}
-                style={styles.orangeButtonSmall} >
-                Change My Avatar
-              </Button>
+
+              <CustomizeModal
+                style={styles.orangeButtonSmall}
+                buttonStyle={styles.orangeButtonSmall}
+                textLine1='Change'
+                textLine2='My Avatar' />
             </div>
           </div>
         </Modal>
