@@ -251,11 +251,25 @@ const styles = {
     avatarContainer: {
         // Positioning
         display: 'flex',
-        margin: '30px 0',
+        marginTop: '30px',
 
         // Contents
         alignItems: 'center',
         justifyContent: 'center',
+    },
+
+    avatar: {
+        margin: 0,
+    },
+
+    avatarContainerFlag: {
+        width: '90px',
+        height: '90px',
+
+        position: 'relative',
+        top: '138px',
+        left: '-330px',
+        zIndex: '10',
     },
 
     buttonContainer: {

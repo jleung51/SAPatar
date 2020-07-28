@@ -198,8 +198,10 @@ class App extends Component {
                         <Medals/>
 
                         <div style={styles.avatarContainer}>
-                            <Person size='320px'/>
-                            <img src={FlagCanada}/>
+                            <div>
+                                <Person size='320px' style={styles.avatar}/>
+                            </div>
+                            <img src={FlagCanada} style={styles.avatarContainerFlag} />
                         </div>
 
                         <div style={styles.buttonContainer}>
