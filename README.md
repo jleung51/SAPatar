@@ -4,6 +4,8 @@
 
 Virtual gamified engagement platform for iXp Interns to create and customize an avatar.
 
+![SAPatar screenshot](./readme-img/screenshot.jpg)
+
 **React website** created with Redux and Bootstrap. It uses  the [SAPataaars](https://www.npmjs.com/package/sapataaars) npm library, an extension of the [avataaars](https://github.com/fangpenlin/avataaars) library.
 
 **View** the website deployed on Netlify [here](https://musing-mestorf-0bba56.netlify.app/), and **learn more** about the project [here](https://youtu.be/HGdrZe228aw).
