@@ -1,6 +1,6 @@
 # <img src="./readme-img/icon.png" width="30"> SAPatar
 
-![Licence: MIT](https://img.shields.io/github/license/LeQuint/SAPatar)
+![Licence: MIT](https://img.shields.io/github/license/jleung51/SAPatar)
 
 Virtual gamified engagement platform for iXp Interns to create and customize an avatar.
 
