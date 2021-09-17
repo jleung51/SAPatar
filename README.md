@@ -20,7 +20,7 @@ First, install [Node.js](https://nodejs.org/en/download/).
 
 Clone the repository:
 ```shel
-git clone https://github.wdf.sap.corp/I535790/SAPatar
+git clone https://github.com/jleung51/SAPatar
 ```
 
 Install the necessary packages:
